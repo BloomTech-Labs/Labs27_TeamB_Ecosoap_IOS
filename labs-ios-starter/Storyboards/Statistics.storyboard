@@ -434,12 +434,12 @@
         <!--NewProductionReport-->
         <scene sceneID="NqA-RF-Enr">
             <objects>
-                <viewController title="NewProductionReport" id="ZPt-kr-VHm" sceneMemberID="viewController">
+                <viewController title="NewProductionReport" id="ZPt-kr-VHm" customClass="NewReportViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ch-KK-7cy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-Zz-xqa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-Zz-xqa" userLabel="AddPhotoButton">
                                 <rect key="frame" x="100" y="114" width="214" height="178.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CreatePlantVC.AddImageButton"/>
                                 <constraints>
@@ -449,6 +449,10 @@
                                 <state key="normal" backgroundImage="camera.viewfinder" catalog="system">
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPhotoButton:" destination="O48-dD-gkt" eventType="touchUpInside" id="8IM-8S-ta0"/>
+                                    <action selector="addPhotoButton:" destination="ZPt-kr-VHm" eventType="touchUpInside" id="anE-5p-yWj"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7T-nj-8Js">
                                 <rect key="frame" x="20" y="87" width="374" height="268"/>
@@ -546,6 +550,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" name="Panel System Background"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitReportButton:" destination="ZPt-kr-VHm" eventType="touchUpInside" id="4OW-oG-VDv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hxf-cO-A4q"/>
@@ -556,8 +563,16 @@
                             <constraint firstItem="Hxf-cO-A4q" firstAttribute="trailing" secondItem="xoi-Gb-5tg" secondAttribute="trailing" constant="20" id="qlJ-LJ-6Da"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addAPhotoLabel" destination="WzW-Kc-dmb" id="6S2-YT-jzy"/>
+                        <outlet property="addPhotoButtonOulet" destination="l5n-Zz-xqa" id="8mR-rP-EY8"/>
+                        <outlet property="barsProducedTextField" destination="0cn-XD-qhM" id="DqB-lU-u4e"/>
+                        <outlet property="hoursWorkedTextField" destination="YFb-Dc-K5W" id="ag1-0j-b0m"/>
+                        <outlet property="soapMakersTextField" destination="riW-V9-TjW" id="spj-O2-rE8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjc-AA-6be" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="O48-dD-gkt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3786.9565217391309" y="-277.23214285714283"/>
         </scene>
