@@ -55,6 +55,7 @@
 		46BF10BE24D388FF001C6753 /* UIViewController+SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */; };
 		46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */; };
 		725AC1F32526871800860F73 /* OktaAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 725AC1F22526871800860F73 /* OktaAuth */; };
+		729B41EC252D0474002CCF81 /* HubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B41EB252D0474002CCF81 /* HubCoordinator.swift */; };
 		9C25231C24F9E2BB0023D660 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25231B24F9E2BB0023D660 /* DateFormatter.swift */; };
 		9C25231E24F9E2C20023D660 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25231D24F9E2C20023D660 /* Date.swift */; };
 		9C364A8E24F5EA1600FF204D /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C364A8D24F5EA1600FF204D /* Mutator.swift */; };
@@ -138,6 +139,7 @@
 		46BEB4F024C98F0D00FE0CD1 /* Profiles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profiles.storyboard; sourceTree = "<group>"; };
 		46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SimpleAlert.swift"; sourceTree = "<group>"; };
 		46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
+		729B41EB252D0474002CCF81 /* HubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCoordinator.swift; sourceTree = "<group>"; };
 		9C25231B24F9E2BB0023D660 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		9C25231D24F9E2C20023D660 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9C364A8D24F5EA1600FF204D /* Mutator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutator.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		466C4272249A8748007D033E /* labs-ios-starter */ = {
 			isa = PBXGroup;
 			children = (
+				729B41EA252D0456002CCF81 /* Coordinators */,
 				9C9ACA7C24F779BB002D47B5 /* Helpers */,
 				9C9A98E424E5068B007FC7DA /* Models */,
 				9C9A98DF24E4E22F007FC7DA /* Networking */,
@@ -392,6 +395,14 @@
 				46BEB4F024C98F0D00FE0CD1 /* Profiles.storyboard */,
 			);
 			path = Profiles;
+			sourceTree = "<group>";
+		};
+		729B41EA252D0456002CCF81 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				729B41EB252D0474002CCF81 /* HubCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		9C364A8F24F60E4F00FF204D /* Inputs */ = {
@@ -604,6 +615,7 @@
 				9CEA63BF24EE3CA200A2C446 /* HospitalityContract.swift in Sources */,
 				9CEA63B924EE257600A2C446 /* Address.swift in Sources */,
 				13DC372424E63B5F00AE20B3 /* ImpactStatisticsViewController.swift in Sources */,
+				729B41EC252D0474002CCF81 /* HubCoordinator.swift in Sources */,
 				9C25231E24F9E2C20023D660 /* Date.swift in Sources */,
 				13FD2A9924E457A1006D6B43 /* PickupPropertyTableViewCell.swift in Sources */,
 				13FD2AA224E49B39006D6B43 /* PickupsViewController.swift in Sources */,
