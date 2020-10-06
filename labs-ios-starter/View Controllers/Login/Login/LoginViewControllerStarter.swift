@@ -36,36 +36,17 @@ class LoginViewControllerStarter: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 25.0)
         label.numberOfLines = 0
-        label.text = "EcoSoap-Bank"
+        label.text = "Eco-Soap Bank"
+        label.textColor = .white
         label.textAlignment = .center
         return label
-    }()
-    
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "System", size: 17.0)
-        label.textColor = .lightGray
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.text = "Saving, sanitizing, and supplying RECYCLED SOAP for the developing world"
-        return label
-    }()
-    
-    private lazy var registerAccountButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Register", for: .normal)
-        button.setTitleColor(UIColor(named: "ESB Blue"), for: .normal)
-        button.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        return button
     }()
     
     private lazy var forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Forgot Password?", for: .normal)
-        button.setTitleColor(UIColor(named: "ESB Blue"), for: .normal)
+        button.setTitle("Sign up", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         return button
     }()
@@ -73,9 +54,9 @@ class LoginViewControllerStarter: UIViewController {
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(named: "ESB Green")
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(UIColor(named: "ESB Blue"), for: .normal)
+        button.backgroundColor = UIColor.white
         button.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action:#selector(self.login), for: .touchUpInside)
@@ -84,33 +65,31 @@ class LoginViewControllerStarter: UIViewController {
     
     private lazy var usernameTextField: UITextField = {
         let textfield = UITextField()
+        let borderColor = UIColor.white
+        
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.borderStyle = .none
+        textfield.layer.borderColor = borderColor.cgColor
+        textfield.layer.borderWidth = 1.0
         textfield.textContentType = .username
         textfield.clearButtonMode = .whileEditing
-        textfield.placeholder = "  Username"
         textfield.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
         textfield.layer.cornerRadius = 8
-        let imageView = UIImageView(image: UIImage(systemName: "person.fill"))
-        imageView.tintColor = .lightGray
-        textfield.leftView = imageView
-        textfield.leftViewMode = .always
+        textfield.attributedPlaceholder = NSAttributedString(string: "  Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textfield
     }()
     
     private lazy var passwordTextField: UITextField = {
         let textfield = UITextField()
+        let borderColor = UIColor.white
+        
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.borderStyle = .none
+        textfield.layer.borderColor = borderColor.cgColor
+        textfield.layer.borderWidth = 1.0
         textfield.textContentType = .password
         textfield.clearButtonMode = .whileEditing
-        textfield.placeholder = "  Password"
         textfield.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
         textfield.layer.cornerRadius = 8
-        let imageView = UIImageView(image: UIImage(systemName: "lock.fill"))
-        imageView.tintColor = .lightGray
-        textfield.leftView = imageView
-        textfield.leftViewMode = .always
+        textfield.attributedPlaceholder = NSAttributedString(string: "  Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return textfield
     }()
     
@@ -158,7 +137,6 @@ class LoginViewControllerStarter: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        view.backgroundColor = UIColor(named: "ESB Blue")
         return view
     }()
     
@@ -166,7 +144,6 @@ class LoginViewControllerStarter: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        view.backgroundColor = UIColor(named: "ESB Blue")
         return view
     }()
     
@@ -174,15 +151,7 @@ class LoginViewControllerStarter: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 8
-        view.backgroundColor = UIColor(named: "Panel System Background")
         return view
-    }()
-    
-    private lazy var imageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "ESB Logo"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        return imageView
     }()
     
     // MARK: - Actions
@@ -192,24 +161,14 @@ class LoginViewControllerStarter: UIViewController {
     
     // MARK: - Private Methods
     private func setupViews() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        view.backgroundColor = UIColor(named: "ESB System Background")
-        
-        // ESB Logo
-        view.addSubview(imageView)
-        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
-        imageView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.20).isActive = true
+        view.backgroundColor = UIColor(named: "ESB Blue")
         
         // Labels
         infoLabelStackView.addArrangedSubview(titleLabel)
-        infoLabelStackView.addArrangedSubview(descriptionLabel)
         view.addSubview(infoLabelStackView)
+        infoLabelStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -80.0).isActive = true
         infoLabelStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
         infoLabelStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
-        infoLabelStackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
         
         // Panel View
         view.addSubview(panelView)
