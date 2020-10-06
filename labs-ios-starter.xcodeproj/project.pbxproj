@@ -84,6 +84,7 @@
 		9CEA63BD24EE2D2800A2C446 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63BC24EE2D2800A2C446 /* Hub.swift */; };
 		9CEA63BF24EE3CA200A2C446 /* HospitalityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63BE24EE3CA200A2C446 /* HospitalityContract.swift */; };
 		9CEA63C124EF5E7800A2C446 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63C024EF5E7800A2C446 /* Payment.swift */; };
+		BB991B6F252CB4620010088D /* NewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB991B6E252CB4620010088D /* NewReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		9CEA63BC24EE2D2800A2C446 /* Hub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
 		9CEA63BE24EE3CA200A2C446 /* HospitalityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalityContract.swift; sourceTree = "<group>"; };
 		9CEA63C024EF5E7800A2C446 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		BB991B6E252CB4620010088D /* NewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 		13DC372224E5EFA800AE20B3 /* Impact Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				BB991B6C252CB1050010088D /* Production Reports */,
 				13DC372324E63B5F00AE20B3 /* ImpactStatisticsViewController.swift */,
 			);
 			path = "Impact Statistics";
@@ -473,6 +476,14 @@
 			path = "Property Models";
 			sourceTree = "<group>";
 		};
+		BB991B6C252CB1050010088D /* Production Reports */ = {
+			isa = PBXGroup;
+			children = (
+				BB991B6E252CB4620010088D /* NewReportViewController.swift */,
+			);
+			path = "Production Reports";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +600,7 @@
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
 				13DC372624E63C0A00AE20B3 /* ImpactStatisticsOverallCollectionViewCell.swift in Sources */,
 				13518FBB2509C15D000C217F /* PropertyTableViewCell.swift in Sources */,
+				BB991B6F252CB4620010088D /* NewReportViewController.swift in Sources */,
 				9CEA63BF24EE3CA200A2C446 /* HospitalityContract.swift in Sources */,
 				9CEA63B924EE257600A2C446 /* Address.swift in Sources */,
 				13DC372424E63B5F00AE20B3 /* ImpactStatisticsViewController.swift in Sources */,
