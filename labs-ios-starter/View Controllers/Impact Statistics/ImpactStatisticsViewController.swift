@@ -9,7 +9,7 @@
 import UIKit
 
 class ImpactStatisticsViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var propertyTextField: UITextField!
@@ -87,7 +87,7 @@ class ImpactStatisticsViewController: UIViewController {
 }
 
 extension ImpactStatisticsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -134,7 +134,7 @@ extension ImpactStatisticsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20.0, left: 20, bottom: 20, right: 20)
     }
-
+    
 }
 
 extension ImpactStatisticsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -150,7 +150,7 @@ extension ImpactStatisticsViewController: UIPickerViewDelegate, UIPickerViewData
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard let propertyPickerData = propertyPickerData else { return nil }
-
+        
         let componentArray = propertyPickerData[component]
         let title = componentArray[row]
         

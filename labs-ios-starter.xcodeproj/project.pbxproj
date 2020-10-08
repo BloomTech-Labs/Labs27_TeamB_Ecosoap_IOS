@@ -85,6 +85,7 @@
 		9CEA63BD24EE2D2800A2C446 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63BC24EE2D2800A2C446 /* Hub.swift */; };
 		9CEA63BF24EE3CA200A2C446 /* HospitalityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63BE24EE3CA200A2C446 /* HospitalityContract.swift */; };
 		9CEA63C124EF5E7800A2C446 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63C024EF5E7800A2C446 /* Payment.swift */; };
+		BB627598252DF38F0052CA14 /* ExistingReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB627597252DF38F0052CA14 /* ExistingReportViewController.swift */; };
 		BB991B6F252CB4620010088D /* NewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB991B6E252CB4620010088D /* NewReportViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,7 @@
 		9CEA63BC24EE2D2800A2C446 /* Hub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
 		9CEA63BE24EE3CA200A2C446 /* HospitalityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalityContract.swift; sourceTree = "<group>"; };
 		9CEA63C024EF5E7800A2C446 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		BB627597252DF38F0052CA14 /* ExistingReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingReportViewController.swift; sourceTree = "<group>"; };
 		BB991B6E252CB4620010088D /* NewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				BB991B6E252CB4620010088D /* NewReportViewController.swift */,
+				BB627597252DF38F0052CA14 /* ExistingReportViewController.swift */,
 			);
 			path = "Production Reports";
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				9C9ACA7724F7541D002D47B5 /* ImpactStatsInput.swift in Sources */,
 				9C364A9624F6217000FF204D /* ControllerEnums.swift in Sources */,
 				9C364A9124F60E6100FF204D /* PickupInput.swift in Sources */,
+				BB627598252DF38F0052CA14 /* ExistingReportViewController.swift in Sources */,
 				9C9ACA6C24F71F8C002D47B5 /* CancelPickupInput.swift in Sources */,
 				46BEB4E524C98CDC00FE0CD1 /* LoginViewControllerStarter.swift in Sources */,
 				9CEA63B624EE24A700A2C446 /* APIEnums.swift in Sources */,
