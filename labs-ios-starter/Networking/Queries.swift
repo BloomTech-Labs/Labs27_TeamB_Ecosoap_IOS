@@ -16,9 +16,9 @@ class Queries: Request {
     var name: String
 
     private static let collection = [QueryName.userById: Queries.userById,
-                                              .propertyById: Queries.propertyById,
-                                              .propertiesByUserId: Queries.propertiesByUserId,
-                                              .impactStatsByPropertyId: Queries.impactStatsByPropertyId,
+                                     .propertyById: Queries.propertyById,
+                                     .propertiesByUserId: Queries.propertiesByUserId,
+                                     .impactStatsByPropertyId: Queries.impactStatsByPropertyId,
                                               .hubByPropertyId: Queries.hubByPropertyId,
                                               .pickupsByPropertyId: Queries.pickupsByPropertyId,
                                               .nextPaymentByPropertyId: Queries.nextPaymentByPropertyId,

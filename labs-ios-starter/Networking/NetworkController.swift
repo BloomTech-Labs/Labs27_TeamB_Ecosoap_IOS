@@ -37,7 +37,8 @@ class BackendController {
     var pickupCartons: [String: PickupCarton] = [:]
     var hospitalityContracts: [String: HospitalityContract] = [:]
 
-    private var parsers: [ResponseModel: (Any?) throws ->()] = [.property: BackendController.propertyParser,
+    private var parsers: [ResponseModel: (Any?) throws ->()] = [
+                                                        .property: BackendController.propertyParser,
                                                         .properties: BackendController.propertiesParser,
                                                         .user: BackendController.userParser,
                                                         .pickup:  BackendController.pickupParser,
