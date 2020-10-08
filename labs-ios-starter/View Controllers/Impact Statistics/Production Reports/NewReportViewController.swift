@@ -8,17 +8,18 @@
 
 import UIKit
 
-class NewReportViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class NewReportViewController: UIViewController {
     
     //MARK: - IBOutlet
     @IBOutlet var hoursWorkedTextField: UITextField!
+    @IBOutlet var selectedImage: UIImageView!
     @IBOutlet var soapMakersTextField: UITextField!
     @IBOutlet var barsProducedTextField: UITextField!
     @IBOutlet var addAPhotoLabel: UILabel!
     @IBOutlet var addPhotoButtonOulet: UIButton!
     
     //MARK: - Class properties
-    var imagePicker: UIImagePickerController?
+    var imagePicker: UIImagePickerController? // Making reference
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class NewReportViewController: UIViewController, UIImagePickerControllerDelegate
     
     //MARK: - IBAction
     @IBAction func addPhotoButton(_ sender: UIButton) {
+        presentPhotoLibraryActionSheet()
     }
     
     @IBAction func submitReportButton(_ sender: UIButton) {
@@ -87,4 +89,37 @@ class NewReportViewController: UIViewController, UIImagePickerControllerDelegate
         controller.sourceType = sourceType
         self.present(controller, animated: true)
     }
+}
+
+//MARK: - Image Picker
+//MARK: -Picker
+extension NewReportViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    // Image picker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return self.imagePickerControllerDidCancel(picker)
+        }
+        self.selectedImage.image = image
+        picker.dismiss(animated: true) {
+            // clean up
+            picker.delegate = nil
+            self.imagePicker = nil
+        }
+        addPhotoButtonOulet.isEnabled = false
+        addPhotoButtonOulet.alpha = 0
+        addAPhotoLabel.alpha = 0
+//        activateButton(uploadThisImageButton)
+//        activateButton(removeThisImageButton)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true) {
+            // clean up
+            picker.delegate = nil
+            self.imagePicker = nil
+        }
+    }
+    
 }
