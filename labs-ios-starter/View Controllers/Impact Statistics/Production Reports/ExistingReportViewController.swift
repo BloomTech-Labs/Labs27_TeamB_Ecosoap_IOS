@@ -11,7 +11,6 @@ import UIKit
 class ExistingReportViewController: UIViewController {
     
     //MARK: - IBOutlets
-
     @IBOutlet var reportDateLabel: UILabel!
     @IBOutlet var hoursWorkedLabel: UILabel!
     @IBOutlet var soapmakersWorkedLabel: UILabel!
@@ -21,15 +20,13 @@ class ExistingReportViewController: UIViewController {
     @IBOutlet var deleteButtonOutlet: UIButton!
     @IBOutlet var editButtonOutlet: UIButton!
     
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addAPhotoLabel.isHidden = true // Don't need this for existing reports
-
     }
     
     //MARK: - IBAction
-    
     @IBAction func editButtonTapped(_ sender: UIButton) {
     }
     
@@ -37,12 +34,6 @@ class ExistingReportViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-
-
 }
