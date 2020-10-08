@@ -2,7 +2,7 @@
 
 ## Branch Naming Convention
 Create a branch name relevant to the feature you are developing:  
-- `develop-[feature]`  
+- `developer-[feature]`  
 
 Example branch name for developing log in:
 > developer-login  
