@@ -1,11 +1,11 @@
-# Labs25-Ecosoap-TeamC-IOS
+# Labs25-Ecosoap-TeamB-IOS
 
 ### Branch Naming Convention
 Create a branch name relevant to the feature you are developing:  
 - `develop-[feature]`  
 
 Example branch name for developing log in:
-> develop-login  
+> developer-login  
 
 ### Pull Request Template
 
