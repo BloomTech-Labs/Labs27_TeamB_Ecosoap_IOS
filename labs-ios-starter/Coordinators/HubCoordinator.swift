@@ -11,8 +11,8 @@ import UIKit
 
 class HubCoordinator {
     
-    let backEndController = BackendController.shared
-    
+    // MARK: - Properties
+    var user: User
     var userId: String
     var firstName: String
     var middleName: String
@@ -20,14 +20,15 @@ class HubCoordinator {
     var userEmail: String
     var userSkypeId: String
     var userPhone: String
-    
     var reportDate: Date
     var barsProduced: Int
     var soapMakersWorked: Int
     var hoursSoapMakersWorked: Int
+    let backEndController = BackendController.shared
     
 //    var soapPhotos: UIImage // need to convert String to UIImage
     
+    // MARK: - Init
     init() {
         userId = "UserID Test"
         firstName = "Johnny"
@@ -41,5 +42,12 @@ class HubCoordinator {
         barsProduced = 1
         soapMakersWorked = 1
         hoursSoapMakersWorked = 1
+        user = backEndController.loggedInUser
     }
+    
+    // MARK: - Functions
+    private func fetchImpactReport() {
+        
+    }
+    
 }
