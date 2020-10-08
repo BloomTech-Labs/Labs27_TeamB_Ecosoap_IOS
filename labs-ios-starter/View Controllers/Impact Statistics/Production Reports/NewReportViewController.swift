@@ -32,14 +32,17 @@ class NewReportViewController: UIViewController {
     }
     
     @IBAction func submitReportButton(_ sender: UIButton) {
+        //MARK: TODO: Send to backend
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
-    
-    //MARK: - Private methods
+}
+//MARK: - Image Picker
+extension NewReportViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Access photo library
     private func presentPhotoLibraryActionSheet() {
@@ -89,17 +92,11 @@ class NewReportViewController: UIViewController {
         controller.sourceType = sourceType
         self.present(controller, animated: true)
     }
-}
 
-//MARK: - Image Picker
-//MARK: -Picker
-extension NewReportViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    
     // Image picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
-            return self.imagePickerControllerDidCancel(picker)
+            return imagePickerControllerDidCancel(picker)
         }
         self.selectedImage.image = image
         picker.dismiss(animated: true) {
@@ -110,8 +107,6 @@ extension NewReportViewController: UIImagePickerControllerDelegate, UINavigation
         addPhotoButtonOulet.isEnabled = false
         addPhotoButtonOulet.alpha = 0
         addAPhotoLabel.alpha = 0
-//        activateButton(uploadThisImageButton)
-//        activateButton(removeThisImageButton)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -121,5 +116,4 @@ extension NewReportViewController: UIImagePickerControllerDelegate, UINavigation
             self.imagePicker = nil
         }
     }
-    
 }
