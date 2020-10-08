@@ -186,7 +186,7 @@ class ProfileController {
         dataTask.resume()
     }
     
-    func updateAuthenticatedUserProfile(_ profile: Profile, with name: String, email: String, avatarURL: URL, completion: @escaping (Profile) -> Void) {
+    func updateAuthenticatedUserProfile(_ profile: Profile, with firstName: String, middleName: String, lastName: String, userEmail: String, userSkypeId: String, userPhone: String, completion: @escaping (Profile) -> Void) {
         
         var oktaCredentials: OktaCredentials
         
@@ -257,7 +257,8 @@ class ProfileController {
     
     // NOTE: This method is unused, but left as an example for creating a profile.
     
-    func createProfile(with email: String, name: String, avatarURL: URL) -> Profile? {
+    func createProfile(with firstName: String, middleName: String, lastName: String, userEmail: String, userSkypeId: String, userPhone: String) -> Profile? {
+//    (with email: String, name: String, avatarURL: URL) -> Profile? {
         var oktaCredentials: OktaCredentials
         
         do {
@@ -272,7 +273,13 @@ class ProfileController {
             NSLog("Credentials do not exist. Unable to create profile")
             return nil
         }
-        return Profile(id: userID, email: email, name: name, avatarURL: avatarURL)
+        
+        return Profile(userId: userID, firstName: firstName, middleName: middleName, lastName: lastName, userEmail: userEmail, userSkypeId: userSkypeId, userPhone: userPhone)
+        
+        
+        
+        
+//         return Profile(id: userID, email: email, name: name, avatarURL: avatarURL)
     }
     
     // NOTE: This method is unused, but left as an example for creating a profile on the scaffolding backend.

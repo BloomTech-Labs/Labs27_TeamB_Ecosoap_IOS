@@ -16,10 +16,17 @@ class AddProfileViewController: UIViewController {
 
     // MARK: - Properties and Outlets
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var avatarURLTextField: UITextField!
+//    @IBOutlet weak var nameTextField: UITextField!
+//    @IBOutlet weak var emailTextField: UITextField!
+//    @IBOutlet weak var avatarURLTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var firstTextField: UITextField!
+    @IBOutlet weak var middleTextField: UITextField!
+    @IBOutlet weak var lastTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var skypeTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     
     weak var delegate: AddProfileDelegate?
     
@@ -33,9 +40,16 @@ class AddProfileViewController: UIViewController {
         
         setUpKeyboardDismissalRecognizer()
         
-        nameTextField.delegate = self
+        firstTextField.delegate = self
+        middleTextField.delegate = self
+        lastTextField.delegate = self
         emailTextField.delegate = self
-        avatarURLTextField.delegate = self
+        skypeTextField.delegate = self
+        phoneTextField.delegate = self
+        
+//        nameTextField.delegate = self
+//        emailTextField.delegate = self
+//        avatarURLTextField.delegate = self
     }
     
     // MARK: - Actions
@@ -46,11 +60,17 @@ class AddProfileViewController: UIViewController {
     
     @IBAction func addProfile(_ sender: Any) {
         
-        guard let name = nameTextField.text,
-            let email = emailTextField.text,
-            let avatarURLString = avatarURLTextField.text,
-            let avatarURL = URL(string: avatarURLString),
-            let profile = profileController.createProfile(with: email, name: name, avatarURL: avatarURL) else {
+        guard let firstName = firstTextField.text,
+              let middleName = middleTextField.text,
+              let lastName = lastTextField.text,
+              let userEmail = emailTextField.text,
+              let userSkypeId = skypeTextField.text,
+              let userPhone = phoneTextField.text,
+//            let email = emailTextField.text,
+//            let avatarURLString = avatarURLTextField.text,
+//            let avatarURL = URL(string: avatarURLString),
+            let profile = profileController.createProfile(with: firstName, middleName: middleName, lastName: lastName, userEmail: userEmail, userSkypeId: userSkypeId, userPhone: userPhone) else {
+//        (with: email, name: name, avatarURL: avatarURL) else {
                 NSLog("Fields missing information. Present alert to notify user to enter all information.")
                 return
         }
@@ -86,12 +106,22 @@ class AddProfileViewController: UIViewController {
 extension AddProfileViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
-        case nameTextField:
+        
+        case firstTextField:
+            middleTextField.becomeFirstResponder()
+        case middleTextField:
+            lastTextField.becomeFirstResponder()
+        case lastTextField:
             emailTextField.becomeFirstResponder()
         case emailTextField:
-            avatarURLTextField.becomeFirstResponder()
-        case avatarURLTextField:
-            avatarURLTextField.resignFirstResponder()
+            skypeTextField.becomeFirstResponder()
+            
+        //        case nameTextField:
+        //            emailTextField.becomeFirstResponder()
+        //        case emailTextField:
+        //            avatarURLTextField.becomeFirstResponder()
+        //        case avatarURLTextField:
+        //            avatarURLTextField.resignFirstResponder()
         default:
             break
         }
