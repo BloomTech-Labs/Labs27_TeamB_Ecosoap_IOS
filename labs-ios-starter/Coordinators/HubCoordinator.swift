@@ -20,6 +20,7 @@ class HubCoordinator {
     var userEmail: String
     var userSkypeId: String
     var userPhone: String
+    var userHub: String
     var reportDate: Date
     var barsProduced: Int
     var soapMakersWorked: Int
@@ -37,6 +38,7 @@ class HubCoordinator {
         userEmail = "johnnyQAppleseed@email.com"
         userSkypeId = "@johnnyqappleseed"
         userPhone = "123-234-4567"
+        userHub = "12345"
         
         reportDate = Date()
         barsProduced = 1

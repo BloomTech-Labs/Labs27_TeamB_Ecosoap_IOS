@@ -13,9 +13,10 @@ class ProfileController {
     
     static let shared = ProfileController()
     
-    let oktaAuth = OktaAuth(baseURL: URL(string: "https://auth.lambdalabs.dev/")!,
-                            clientID: "0oapaqacafrGUTfKx4x6",
-                            redirectURI: "labs://scaffolding/implicit/callback")
+    let oktaAuth = OktaAuth(
+        baseURL: URL(string: "https://dev-668428.okta.com")!,
+        clientID: "0oapaqacafrGUTfKx4x6",
+        redirectURI: "labs://scaffolding/implicit/callback")
     
     private(set) var authenticatedUserProfile: Profile?
     private(set) var profiles: [Profile] = []
@@ -37,6 +38,9 @@ class ProfileController {
         
         var oktaCredentials: OktaCredentials
         
+        
+        // Make a method to do something similar, by grabbing the credentials from OktaAuth
+        // Use the ID token as the "LoginInput" of the Login mutation on the backend to get the full User object back from the API. (Don't use the ID token like it's used below in a header.)
         do {
             oktaCredentials = try oktaAuth.credentialsIfAvailable()
         } catch {

@@ -214,7 +214,9 @@ class LoginViewControllerStarter: UIViewController {
     
     // MARK: Notification Handling
     private func checkForExistingProfile(with notification: Notification) {
-        checkForExistingProfile()
+//        checkForExistingProfile()
+        // TODO: Delete when OktaAuth functions properly.  This skips the verification method.
+        self.performSegue(withIdentifier: "ShowDetailProfileList", sender: nil)
     }
     
     private func checkForExistingProfile() {
@@ -222,7 +224,6 @@ class LoginViewControllerStarter: UIViewController {
             
             guard let self = self,
                 self.presentedViewController == nil else { return }
-            
             if exists {
                 self.performSegue(withIdentifier: "ShowDetailProfileList", sender: nil)
             } else {

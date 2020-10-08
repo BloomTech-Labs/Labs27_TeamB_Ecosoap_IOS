@@ -69,7 +69,7 @@ class BackendController {
         }
     }
 
-    private static func userParser(data: Any?) throws {
+    static func userParser(data: Any?) throws {
         guard let userContainer = data as? [String: Any] else {
             throw newError(message: "Couldn't USER cast data as dictionary for initialization")
         }
@@ -185,11 +185,23 @@ class BackendController {
             completion(Errors.RequestInitFail)
             return
         }
-        requestAPI(with: request) { (_, error) in
+        requestAPI(with: request) { (data, error) in
             if let error = error {
                 completion(error)
                 return
             }
+            
+            if let data = data as? [String: Any] {
+                print(data)
+            }
+            
+            print(self.users[id]?.firstName)
+            print(self.users[id]?.middleName)
+            print(self.users[id]?.lastName)
+            print(self.users[id]?.email)
+            print(self.users[id]?.skype)
+            print(self.users[id]?.phone)
+            print(self.users[id]?.id)
             completion(nil)
         }
     }
