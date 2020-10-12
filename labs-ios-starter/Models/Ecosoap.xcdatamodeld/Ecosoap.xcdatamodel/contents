@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Carton" representedClassName="Carton" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="percentFull" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Driver" representedClassName="Driver" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <relationship name="pickup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PickUp" inverseName="driver" inverseEntity="PickUp"/>
+    </entity>
+    <entity name="Hub" representedClassName="Hub" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="coordinates" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="impactReports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImpactReport" inverseName="hub" inverseEntity="ImpactReport"/>
+    </entity>
+    <entity name="ImpactReport" representedClassName="ImpactReport" syncable="YES" codeGenerationType="class">
+        <attribute name="bottlesRecycled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="linensRecycled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="paperRecycled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="peopleServed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="soapRecycled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="womenEmployed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="hub" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hub" inverseName="impactReports" inverseEntity="Hub"/>
+    </entity>
+    <entity name="PickUp" representedClassName="PickUp" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="collectionType" optional="YES" attributeType="String"/>
+        <attribute name="confirmationCode" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="label" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES"/>
+        <attribute name="pickupDate" optional="YES" attributeType="String"/>
+        <attribute name="readyDate" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="cartons" optional="YES" maxCount="1" deletionRule="Nullify"/>
+        <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="pickup" inverseEntity="Driver"/>
+        <relationship name="property" optional="YES" maxCount="1" deletionRule="Nullify"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="hubID" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="skype" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-331.81640625" positionY="40.47265625" width="128" height="238"/>
+        <element name="Hub" positionX="-346.4375" positionY="-200.87890625" width="128" height="163"/>
+        <element name="PickUp" positionX="215.28515625" positionY="16.5859375" width="128" height="223"/>
+        <element name="ImpactReport" positionX="37.046875" positionY="-349.15625" width="128" height="148"/>
+        <element name="Carton" positionX="236.90234375" positionY="-126.57421875" width="128" height="88"/>
+        <element name="Driver" positionX="-78.83203125" positionY="30.875" width="128" height="103"/>
+    </elements>
+</model>

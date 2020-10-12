@@ -56,6 +56,7 @@
 		46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */; };
 		725AC1F32526871800860F73 /* OktaAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 725AC1F22526871800860F73 /* OktaAuth */; };
 		729B41EC252D0474002CCF81 /* HubCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B41EB252D0474002CCF81 /* HubCoordinator.swift */; };
+		72C499D72534F228005E1C2B /* Ecosoap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72C499D52534F228005E1C2B /* Ecosoap.xcdatamodeld */; };
 		9C25231C24F9E2BB0023D660 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25231B24F9E2BB0023D660 /* DateFormatter.swift */; };
 		9C25231E24F9E2C20023D660 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25231D24F9E2C20023D660 /* Date.swift */; };
 		9C364A8E24F5EA1600FF204D /* Mutator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C364A8D24F5EA1600FF204D /* Mutator.swift */; };
@@ -141,6 +142,7 @@
 		46BF10BD24D388FF001C6753 /* UIViewController+SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SimpleAlert.swift"; sourceTree = "<group>"; };
 		46C2BC9124D432F90077E49D /* ProfileTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarViewController.swift; sourceTree = "<group>"; };
 		729B41EB252D0474002CCF81 /* HubCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCoordinator.swift; sourceTree = "<group>"; };
+		72C499D62534F228005E1C2B /* Ecosoap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ecosoap.xcdatamodel; sourceTree = "<group>"; };
 		9C25231B24F9E2BB0023D660 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		9C25231D24F9E2C20023D660 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9C364A8D24F5EA1600FF204D /* Mutator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutator.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				9C9A98EB24E509B7007FC7DA /* ImpactStats.swift */,
 				9CEA63BC24EE2D2800A2C446 /* Hub.swift */,
 				9CEA63C024EF5E7800A2C446 /* Payment.swift */,
+				72C499D52534F228005E1C2B /* Ecosoap.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				13A4A7EB24E35923005326F9 /* SchedulePickupViewController.swift in Sources */,
 				13A4A7D524E1F8CF005326F9 /* DashboardViewController.swift in Sources */,
 				1326A737250FFD4000EFA7CF /* PropertyInfoTableViewCell.swift in Sources */,
+				72C499D72534F228005E1C2B /* Ecosoap.xcdatamodeld in Sources */,
 				1385B76B2515ACC000953FD4 /* MakePaymentViewController.swift in Sources */,
 				13FD2A9C24E45C79006D6B43 /* AddPickupCartonTableViewCell.swift in Sources */,
 				1385B76D2515ADEF00953FD4 /* PaymentInvoiceViewController.swift in Sources */,
@@ -871,6 +875,19 @@
 			productName = OktaAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		72C499D52534F228005E1C2B /* Ecosoap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72C499D62534F228005E1C2B /* Ecosoap.xcdatamodel */,
+			);
+			currentVersion = 72C499D62534F228005E1C2B /* Ecosoap.xcdatamodel */;
+			path = Ecosoap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 466C4268249A8748007D033E /* Project object */;
 }
