@@ -70,17 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1971.0144927536232" y="193.52678571428569"/>
         </scene>
-<<<<<<< HEAD
-        <!--Profile Detail View Controller-->
-        <scene sceneID="ezE-NR-lbg">
-            <objects>
-                <viewController id="hjE-3w-q2l" customClass="ProfileDetailViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
-=======
         <!--Profile List View Controller-->
         <scene sceneID="ezE-NR-lbg">
             <objects>
                 <viewController id="hjE-3w-q2l" customClass="ProfileListViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> EzekwoProfileUIUpdate
                     <view key="view" contentMode="scaleToFill" id="Fot-st-tjW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,14 +302,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Settings" id="NPV-sa-GdF">
-<<<<<<< HEAD
-                                        <leftBarButtonItems>
-                                            <barButtonItem id="GCD-rN-iVc"/>
-                                            <barButtonItem systemItem="cancel" id="gx3-6m-nAS"/>
-                                        </leftBarButtonItems>
-=======
                                         <barButtonItem key="leftBarButtonItem" id="GCD-rN-iVc"/>
->>>>>>> EzekwoProfileUIUpdate
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ovf-Je-DQG"/>
                                     </navigationItem>
                                 </items>
