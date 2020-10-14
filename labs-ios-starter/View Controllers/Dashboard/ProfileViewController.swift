@@ -14,9 +14,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private let accountInfoLabels = ["Name",
-                               "Company",
-                               "Address",]
+    private let accountInfoLabels = ["First Name",
+                               "Middle Name",
+                               "Last Name",]
     private let contactInfoLabels = ["Phone",
                                      "Email",
                                      "Skype"]
@@ -26,9 +26,9 @@ class ProfileViewController: UIViewController {
     private let contactInfoImageViews = [UIImage(systemName: "phone.fill"),
                                          UIImage(named: "Skype Logo"),
                                          UIImage(systemName: "envelope.fill")]
-    private let placeholderData = ["John Doe",
-                                   "Hilton Worldwide Holdings Inc.",
-                                   "250 Forbes Ave"]
+    private let placeholderData = ["John",
+                                   "Q",
+                                   "Appleseed"]
     private let placeholderData2 = ["345-594-9034",
                                    "example@gmail.com",
                                     "jdoe"]

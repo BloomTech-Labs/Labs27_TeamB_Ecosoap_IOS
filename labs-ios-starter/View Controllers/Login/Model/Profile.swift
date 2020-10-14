@@ -12,7 +12,7 @@ import UIKit
 
 struct Profile: Codable {
     
-    let userId: String
+    var userId: String
     let firstName: String
     let middleName: String
     let lastName: String
@@ -25,14 +25,14 @@ struct Profile: Codable {
 //    var avatarImage: UIImage? = nil
     
 //    enum CodingKeys: String, CodingKey {
-//        case userId
+//        case userID
 //        case firstName
 //        case middleName
 //        case lastName
 //        case userEmail
 //        case userSkypeID
 //        case userPhone
-////        case avatarURL = "avatarUrl"
+//////        case avatarURL = "avatarUrl"
 //    }
 }
 
