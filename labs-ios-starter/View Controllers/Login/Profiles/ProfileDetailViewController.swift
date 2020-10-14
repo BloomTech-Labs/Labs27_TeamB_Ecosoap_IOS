@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ProfileDetailViewController: UIViewController, UITextFieldDelegate {
+class ProfileDetailViewController: UIViewController {
     
     // MARK: - Properties and Outlets
     
-    // Labels
+//    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var middleLabel: UILabel!
     @IBOutlet weak var lastLabel: UILabel!
@@ -20,7 +20,6 @@ class ProfileDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var skypeLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
-    // Text Fields
     @IBOutlet weak var editStackView: UIStackView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var middleTextField: UITextField!
@@ -28,12 +27,12 @@ class ProfileDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var skypeTextField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
+   
+//    @IBOutlet weak var avatarURLTextField: UITextField!
     
     var profileController: ProfileController = ProfileController.shared
     var profile: Profile?
     var isUsersProfile = true
-    var wasEdited = false
-    var keyboardDismissalTapRecognizer: UITapGestureRecognizer!
     
     // MARK: - View Lifecycle
     
@@ -41,72 +40,52 @@ class ProfileDetailViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         updateViews()
-        setUpKeyboardDismissalRecognizer()
-        navigationItem.rightBarButtonItem = editButtonItem
-
-        
-        nameTextField.delegate = self
-        middleTextField.delegate = self
-        lastTextField.delegate = self
-        emailTextField.delegate = self
-        skypeTextField.delegate = self
-        phoneNumberField.delegate = self
     }
     
-//    @IBAction func cancel(_ sender: Any) {
-//        dismiss(animated: true, completion: nil)
-//    }
-    @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func cancelProfileUpdate(_ sender: Any) {
+        setEditing(false, animated: true)
     }
-    @IBAction func addProfile(_ sender: Any) {
-        
-        guard let profile = profileController.authenticatedUserProfile,
-        let firstName = nameTextField.text,
-              let middleName = middleTextField.text,
-              let lastName = lastTextField.text,
-              let userEmail = emailTextField.text,
-              let userSkypeId = skypeTextField.text,
-              let userPhone = phoneNumberField.text,
-              let _ = profileController.createProfile(with: firstName, middleName: middleName, lastName: lastName, userEmail: userEmail, userSkypeId: userSkypeId, userPhone: userPhone) else {
-            NSLog("Fields missing information. Present alert to notify user to enter all information.")
-            return
-        }
-        profileController.createProfile(with: firstName, middleName: middleName, lastName: lastName, userEmail: userEmail, userSkypeId: userSkypeId, userPhone: userPhone)
-        navigationController?.popToRootViewController(animated: true)
-            
+    
+    @IBAction func saveProfileChanges(_ sender: Any) {
+        // ToDo - send user back to
     }
-
-        
-        @IBAction func saveProfileChanges(_ sender: Any) {
-            // ToDo - send user back to
-        }
     
     // Change to edit profile, figure out how to change button from edit to cancel
-//    @IBAction func updateProfile(_ sender: Any) {
-//
-//        guard let profile = profileController.authenticatedUserProfile,
-//              let name = nameTextField.text,
-//              let middle = middleTextField.text,
-//              let last = lastTextField.text,
-//              let email = emailTextField.text,
-//              let skype = skypeTextField.text,
-//              let number = phoneNumberField.text
-//        else {
-//            presentSimpleAlert(with: "Some information was missing",
-//                               message: "Please enter all information in, and ensure the avatar URL is in the correct format.",
-//                               preferredStyle: .alert,
-//                               dismissText: "Dismiss")
-//
-//            return
-//        }
-//
-//        profileController.updateAuthenticatedUserProfile(profile, with: name, middleName: middle, lastName: last, userEmail: email, userSkypeId: skype, userPhone: number) { [weak self] (updatedProfile) in
+    @IBAction func updateProfile(_ sender: Any) {
+        
+        guard let profile = profileController.authenticatedUserProfile,
+            let name = nameTextField.text,
+            let middle = middleTextField.text,
+            let last = lastTextField.text,
+            let email = emailTextField.text,
+            let skype = skypeTextField.text,
+            let number = phoneNumberField.text
+//            let avatarURLString = avatarURLTextField.text,
+//            let avatarURL = URL(string: avatarURLString)
+        else {
+                presentSimpleAlert(with: "Some information was missing",
+                                   message: "Please enter all information in, and ensure the avatar URL is in the correct format.",
+                                   preferredStyle: .alert,
+                                   dismissText: "Dismiss")
+                
+                return
+        }
+        
+        profileController.updateAuthenticatedUserProfile(profile, with: name, middleName: middle, lastName: last, userEmail: email, userSkypeId: skype, userPhone: number) { [weak self] (updatedProfile) in
+            
+            guard let self = self else { return }
+            self.updateViews(with: updatedProfile)
+        }
+      
+    }
+    
+    
+        
+//        profileController.updateAuthenticatedUserProfile(profile, with: name, email: email, avatarURL: avatarURL) { [weak self] (updatedProfile) in
 //
 //            guard let self = self else { return }
 //            self.updateViews(with: updatedProfile)
 //        }
-//
 //    }
     
     // MARK: - Private Methods
@@ -120,19 +99,7 @@ class ProfileDetailViewController: UIViewController, UITextFieldDelegate {
         } else {
             navigationItem.rightBarButtonItem = editButtonItem
         }
-        navigationItem.hidesBackButton = editing
     }
-    
-    private func setUpKeyboardDismissalRecognizer() {
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(recognizer)
-        keyboardDismissalTapRecognizer = recognizer
-    }
-    
-    @objc override func dismissKeyboard() {
-        view.endEditing(true)
-    }
-
     
     
     // MARK: View Setup

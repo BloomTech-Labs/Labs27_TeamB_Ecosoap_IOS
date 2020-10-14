@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4a7-cC-Xlp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4a7-cC-Xlp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +14,8 @@
                     <view key="view" contentMode="scaleToFill" id="INU-fS-Snd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="R8l-LV-vJe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fm5-ES-PwH"/>
                     <connections>
@@ -48,37 +46,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-Qv-MEf">
-                                <rect key="frame" x="20" y="69" width="374" height="289"/>
+                                <rect key="frame" x="20" y="69" width="374" height="136"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhE-9G-fp3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhE-9G-fp3">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Middle Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-mr-3T1">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yi1-iK-B9t">
                                         <rect key="frame" x="0.0" y="51" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y3-8c-HaI">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Avatar URL:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-1H-z5a">
                                         <rect key="frame" x="0.0" y="102" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvw-YF-y74">
-                                        <rect key="frame" x="0.0" y="153" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skype:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c40-6W-cvD">
-                                        <rect key="frame" x="0.0" y="204" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yi1-iK-B9t">
-                                        <rect key="frame" x="0.0" y="255" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -105,11 +88,10 @@
                                 </items>
                             </toolbar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yu2-g9-PBg">
-                                <rect key="frame" x="188.5" y="438" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="285" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Qhm-Qa-x5Q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="s8x-4x-PO2" firstAttribute="top" secondItem="Qhm-Qa-x5Q" secondAttribute="top" constant="20" id="3Su-8M-ISi"/>
                             <constraint firstItem="Qhm-Qa-x5Q" firstAttribute="trailing" secondItem="C7b-Qv-MEf" secondAttribute="trailing" constant="20" id="7wV-1j-SH3"/>
@@ -123,15 +105,13 @@
                             <constraint firstItem="s8x-4x-PO2" firstAttribute="leading" secondItem="Qhm-Qa-x5Q" secondAttribute="leading" constant="20" id="wDJ-jB-J5T"/>
                             <constraint firstItem="Iny-A2-ZpV" firstAttribute="leading" secondItem="Qhm-Qa-x5Q" secondAttribute="leading" id="zL2-65-RPg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qhm-Qa-x5Q"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="yu2-g9-PBg" id="2wk-dL-L7d"/>
-                        <outlet property="emailTextField" destination="zvw-YF-y74" id="MEr-28-e9d"/>
-                        <outlet property="firstTextField" destination="UhE-9G-fp3" id="w6R-Ou-cAJ"/>
-                        <outlet property="lastTextField" destination="7y3-8c-HaI" id="qkX-Ju-Y36"/>
-                        <outlet property="middleTextField" destination="Tc8-mr-3T1" id="hcj-mS-p4G"/>
-                        <outlet property="phoneTextField" destination="Yi1-iK-B9t" id="0E4-zL-oXu"/>
-                        <outlet property="skypeTextField" destination="c40-6W-cvD" id="yKk-GY-e2K"/>
+                        <outlet property="avatarURLTextField" destination="Dji-1H-z5a" id="ndo-Kg-vgf"/>
+                        <outlet property="emailTextField" destination="Yi1-iK-B9t" id="t5e-8a-YIE"/>
+                        <outlet property="nameTextField" destination="UhE-9G-fp3" id="lQ2-Bv-bL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewZ-5N-Q8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -139,9 +119,4 @@
             <point key="canvasLocation" x="2355" y="-376"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
