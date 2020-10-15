@@ -257,7 +257,7 @@ class ProfileController {
     
     // NOTE: This method is unused, but left as an example for creating a profile.
     
-    func createProfile(with firstName: String, middleName: String, lastName: String, userEmail: String, userSkypeId: String, userPhone: String) -> Profile? {
+    func createProfile(firstName: String, middleName: String, lastName: String, userEmail: String, userSkypeId: String, userPhone: String) -> Profile? {
 //    (with email: String, name: String, avatarURL: URL) -> Profile? {
         var oktaCredentials: OktaCredentials
         

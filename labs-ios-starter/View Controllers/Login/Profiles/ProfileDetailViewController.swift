@@ -74,19 +74,18 @@ class ProfileDetailViewController: UIViewController {
             let number = phoneNumberField.text
         else {
                 presentSimpleAlert(with: "Some information was missing",
-                                   message: "Please enter all information in,.",
+                                   message: "Please enter all information in to continue.",
                                    preferredStyle: .alert,
                                    dismissText: "Dismiss")
-                
                 return
         }
         
         profileController.updateAuthenticatedUserProfile(profile, with: name, middleName: middle, lastName: last, userEmail: email, userSkypeId: skype, userPhone: number) { [weak self] (updatedProfile) in
-            
             guard let self = self else { return }
             self.updateViews(with: updatedProfile)
+          
         }
-        navigationController?.popToRootViewController(animated: true)
+
     }
     
     
