@@ -13,6 +13,15 @@ class SchedulePickupViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var schedulePickupButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var selectDriverText: UITextField!
+    @IBOutlet weak var soapTextField: UITextField!
+    @IBOutlet weak var paperTextField: UITextField!
+    @IBOutlet weak var linensTextField: UITextField!
+    @IBOutlet weak var bottlesTextField: UITextField!
+    @IBOutlet weak var orderNotesTextField: UITextField!
     
     // MARK: - Properties
     private var cartons: [Int] = [-1]
