@@ -84,7 +84,7 @@
                         <segue destination="Zm1-Rj-bdb" kind="show" identifier="ShowPropertiesPushSegue" id="im5-dt-uH9"/>
                         <segue destination="jBn-78-5cb" kind="show" identifier="ShowSettingsPushSegue" id="xDm-wD-8mA"/>
                         <segue destination="73s-A1-Zqb" kind="show" identifier="ShowStatisticsPushSegue" id="jjD-P6-oFW"/>
-                        <segue destination="TOS-0y-MBN" kind="show" identifier="Profile" id="6HY-qd-ic9"/>
+                        <segue destination="TOS-0y-MBN" kind="show" identifier="ShowProfilePushSegue" id="6HY-qd-ic9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCI-fu-8f8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

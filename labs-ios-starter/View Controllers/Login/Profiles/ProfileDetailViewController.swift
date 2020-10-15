@@ -16,7 +16,6 @@ class ProfileDetailViewController: UIViewController {
     
     // MARK: - Properties and Outlets
     
-//    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var middleLabel: UILabel!
     @IBOutlet weak var lastLabel: UILabel!
@@ -37,6 +36,7 @@ class ProfileDetailViewController: UIViewController {
     var profileController: ProfileController = ProfileController.shared
     var profile: Profile?
     var isUsersProfile = true
+    var wasEdited = false
     weak var delegate: DetailProfileDelegate?
     var keyboardDismissalTapRecognizer: UITapGestureRecognizer!
     
@@ -83,26 +83,14 @@ class ProfileDetailViewController: UIViewController {
         profileController.updateAuthenticatedUserProfile(profile, with: name, middleName: middle, lastName: last, userEmail: email, userSkypeId: skype, userPhone: number) { [weak self] (updatedProfile) in
             guard let self = self else { return }
             self.updateViews(with: updatedProfile)
+            self.navigationController?.popToRootViewController(animated: true)
           
         }
 
     }
-    
-    
+
         
     // MARK: - Private Methods
-    
-//    override func setEditing(_ editing: Bool, animated: Bool) {
-//        super.setEditing(editing, animated: animated)
-//        editStackView.isHidden = !editing
-//
-//        if editing {
-//            navigationItem.rightBarButtonItem = nil
-//        } else {
-//            navigationItem.rightBarButtonItem = editButtonItem
-//        }
-//    }
-    
 
     private func setUpKeyboardDismissalRecognizer() {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -113,8 +101,6 @@ class ProfileDetailViewController: UIViewController {
     @objc override func dismissKeyboard() {
         view.endEditing(true)
     }
-
-    
     
     // MARK: View Setup
     
@@ -140,7 +126,6 @@ class ProfileDetailViewController: UIViewController {
         skypeLabel.text = profile.userSkypeId
         numberLabel.text = profile.userPhone
         
-        
         guard isUsersProfile else { return }
         
         navigationItem.rightBarButtonItem = editButtonItem
@@ -151,8 +136,6 @@ class ProfileDetailViewController: UIViewController {
         emailTextField.text = profile.userPhone
         skypeTextField.text = profile.userSkypeId
         phoneNumberField.text = profile.userPhone
-        
-//        avatarURLTextField.text = profile.avatarURL?.absoluteString
     }
 }
 
