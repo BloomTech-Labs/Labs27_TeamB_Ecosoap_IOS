@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DetailProfileDelegate: class {
+    func profileWasAdded()
+}
+
 class ProfileDetailViewController: UIViewController {
     
     // MARK: - Properties and Outlets
@@ -33,13 +37,21 @@ class ProfileDetailViewController: UIViewController {
     var profileController: ProfileController = ProfileController.shared
     var profile: Profile?
     var isUsersProfile = true
-    
-    // MARK: - View Lifecycle
+    weak var delegate: DetailProfileDelegate?
+    var keyboardDismissalTapRecognizer: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateViews()
+        setUpKeyboardDismissalRecognizer()
+        
+        nameTextField.delegate = self
+        middleTextField.delegate = self
+        lastTextField.delegate = self
+        emailTextField.delegate = self
+        skypeTextField.delegate = self
+        phoneNumberField.delegate = self
     }
     
     @IBAction func cancelProfileUpdate(_ sender: Any) {
@@ -60,11 +72,9 @@ class ProfileDetailViewController: UIViewController {
             let email = emailTextField.text,
             let skype = skypeTextField.text,
             let number = phoneNumberField.text
-//            let avatarURLString = avatarURLTextField.text,
-//            let avatarURL = URL(string: avatarURLString)
         else {
                 presentSimpleAlert(with: "Some information was missing",
-                                   message: "Please enter all information in, and ensure the avatar URL is in the correct format.",
+                                   message: "Please enter all information in,.",
                                    preferredStyle: .alert,
                                    dismissText: "Dismiss")
                 
@@ -76,30 +86,35 @@ class ProfileDetailViewController: UIViewController {
             guard let self = self else { return }
             self.updateViews(with: updatedProfile)
         }
-      
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
         
-//        profileController.updateAuthenticatedUserProfile(profile, with: name, email: email, avatarURL: avatarURL) { [weak self] (updatedProfile) in
+    // MARK: - Private Methods
+    
+//    override func setEditing(_ editing: Bool, animated: Bool) {
+//        super.setEditing(editing, animated: animated)
+//        editStackView.isHidden = !editing
 //
-//            guard let self = self else { return }
-//            self.updateViews(with: updatedProfile)
+//        if editing {
+//            navigationItem.rightBarButtonItem = nil
+//        } else {
+//            navigationItem.rightBarButtonItem = editButtonItem
 //        }
 //    }
     
-    // MARK: - Private Methods
-    
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
-        editStackView.isHidden = !editing
-        
-        if editing {
-            navigationItem.rightBarButtonItem = nil
-        } else {
-            navigationItem.rightBarButtonItem = editButtonItem
-        }
+
+    private func setUpKeyboardDismissalRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(recognizer)
+        keyboardDismissalTapRecognizer = recognizer
     }
+    
+    @objc override func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     
     
     // MARK: View Setup
@@ -126,16 +141,6 @@ class ProfileDetailViewController: UIViewController {
         skypeLabel.text = profile.userSkypeId
         numberLabel.text = profile.userPhone
         
-//        if let avatarImage = profile.avatarImage {
-//            avatarImageView.image = avatarImage
-//        } else if let avatarURL = profile.avatarURL {
-//            profileController.image(for: avatarURL, completion: { [weak self] (avatarImage) in
-//                guard let self = self else { return }
-//
-//                self.profile?.avatarImage = avatarImage
-//                self.avatarImageView.image = avatarImage
-//            })
-//        }
         
         guard isUsersProfile else { return }
         
@@ -149,5 +154,28 @@ class ProfileDetailViewController: UIViewController {
         phoneNumberField.text = profile.userPhone
         
 //        avatarURLTextField.text = profile.avatarURL?.absoluteString
+    }
+}
+
+
+// MARK: - UITextFieldDelegate
+
+extension ProfileDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        
+        case nameTextField:
+            middleTextField.becomeFirstResponder()
+        case middleTextField:
+            lastTextField.becomeFirstResponder()
+        case lastTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            skypeTextField.becomeFirstResponder()
+
+        default:
+            break
+        }
+        return true
     }
 }

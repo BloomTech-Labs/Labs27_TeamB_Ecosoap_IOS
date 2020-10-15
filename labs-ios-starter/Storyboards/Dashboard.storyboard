@@ -81,10 +81,10 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="FPq-l9-Zd0"/>
                     <connections>
                         <outlet property="collectionView" destination="nWA-ht-8K4" id="baX-2v-0YR"/>
-                        <segue destination="nh7-QP-3Kt" kind="show" identifier="ShowProfilePushSegue" id="3lf-uh-BMB"/>
                         <segue destination="Zm1-Rj-bdb" kind="show" identifier="ShowPropertiesPushSegue" id="im5-dt-uH9"/>
                         <segue destination="jBn-78-5cb" kind="show" identifier="ShowSettingsPushSegue" id="xDm-wD-8mA"/>
                         <segue destination="73s-A1-Zqb" kind="show" identifier="ShowStatisticsPushSegue" id="jjD-P6-oFW"/>
+                        <segue destination="TOS-0y-MBN" kind="show" id="6HY-qd-ic9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCI-fu-8f8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,108 +101,15 @@
             </objects>
             <point key="canvasLocation" x="810" y="398"/>
         </scene>
-        <!--My Profile-->
-        <scene sceneID="bQL-Xt-Kl1">
+        <!--Profiles-->
+        <scene sceneID="SXZ-Io-QCF">
             <objects>
-                <viewController id="nh7-QP-3Kt" customClass="ProfileViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Whb-AI-giO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-p9-JC8">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                                <color key="backgroundColor" name="ESB System Background"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileInfoCell" rowHeight="75" id="lho-3W-wfe" customClass="ProfileInfoTableViewCell" customModule="labs_ios_starter" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.5" width="374" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lho-3W-wfe" id="sWs-Jr-Ndh">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HxS-jV-um4">
-                                                    <rect key="frame" x="81" y="17.5" width="265" height="40.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-A8-eKC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="14.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeD-3Q-dtA">
-                                                            <rect key="frame" x="0.0" y="18.5" width="265" height="22"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                    </subviews>
-                                                </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZP-au-rDI">
-                                                    <rect key="frame" x="20" y="15" width="45" height="45"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OtI-Zt-mu8">
-                                                            <rect key="frame" x="0.0" y="0.5" width="45" height="44"/>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-4U-PWg">
-                                                            <rect key="frame" x="12" y="12" width="21" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="8d4-QQ-GoZ"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="OtI-Zt-mu8" firstAttribute="leading" secondItem="JZP-au-rDI" secondAttribute="leading" id="2Ab-vN-5YG"/>
-                                                        <constraint firstAttribute="trailing" secondItem="3p8-4U-PWg" secondAttribute="trailing" constant="12" id="C8G-Sm-W6X"/>
-                                                        <constraint firstItem="3p8-4U-PWg" firstAttribute="leading" secondItem="JZP-au-rDI" secondAttribute="leading" constant="12" id="Oyl-tK-YeT"/>
-                                                        <constraint firstAttribute="trailing" secondItem="OtI-Zt-mu8" secondAttribute="trailing" id="QSU-Pi-13i"/>
-                                                        <constraint firstAttribute="bottom" secondItem="OtI-Zt-mu8" secondAttribute="bottom" id="Rm8-8C-o6n"/>
-                                                        <constraint firstAttribute="bottom" secondItem="3p8-4U-PWg" secondAttribute="bottom" constant="12" id="VsM-Hf-TiP"/>
-                                                        <constraint firstItem="3p8-4U-PWg" firstAttribute="top" secondItem="JZP-au-rDI" secondAttribute="top" constant="12" id="eaF-fs-VfC"/>
-                                                        <constraint firstAttribute="width" secondItem="JZP-au-rDI" secondAttribute="height" multiplier="1:1" id="fEH-m6-n1x"/>
-                                                        <constraint firstItem="OtI-Zt-mu8" firstAttribute="top" secondItem="JZP-au-rDI" secondAttribute="top" id="lBR-V5-qCW"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="HxS-jV-um4" firstAttribute="centerY" secondItem="sWs-Jr-Ndh" secondAttribute="centerY" id="EEi-1Y-nDd"/>
-                                                <constraint firstItem="JZP-au-rDI" firstAttribute="bottom" secondItem="sWs-Jr-Ndh" secondAttribute="bottomMargin" constant="-4" id="TfW-5Z-NLG"/>
-                                                <constraint firstItem="HxS-jV-um4" firstAttribute="leading" secondItem="JZP-au-rDI" secondAttribute="trailing" constant="16" id="XFY-Kz-R2T"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="HxS-jV-um4" secondAttribute="trailing" constant="8" id="XQR-j1-Rab"/>
-                                                <constraint firstItem="JZP-au-rDI" firstAttribute="leading" secondItem="sWs-Jr-Ndh" secondAttribute="leadingMargin" id="eO2-SO-sjB"/>
-                                                <constraint firstItem="JZP-au-rDI" firstAttribute="top" secondItem="sWs-Jr-Ndh" secondAttribute="topMargin" constant="4" id="yRO-W4-9wf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="circularBackgroundImageView" destination="OtI-Zt-mu8" id="WEz-8i-jWs"/>
-                                            <outlet property="descriptionTextField" destination="UeD-3Q-dtA" id="ucZ-kE-5yt"/>
-                                            <outlet property="iconImageView" destination="3p8-4U-PWg" id="Qh6-Lc-Oev"/>
-                                            <outlet property="titleLabel" destination="2oX-A8-eKC" id="2bt-0D-aRy"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="nh7-QP-3Kt" id="ux8-T4-FRv"/>
-                                    <outlet property="delegate" destination="nh7-QP-3Kt" id="eIY-eq-OIm"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="f36-dc-5T8"/>
-                        <color key="backgroundColor" name="ESB System Background"/>
-                        <constraints>
-                            <constraint firstItem="fSi-p9-JC8" firstAttribute="leading" secondItem="f36-dc-5T8" secondAttribute="leading" id="2eI-RT-7BU"/>
-                            <constraint firstItem="fSi-p9-JC8" firstAttribute="top" secondItem="f36-dc-5T8" secondAttribute="top" id="T8E-wo-bOx"/>
-                            <constraint firstItem="fSi-p9-JC8" firstAttribute="bottom" secondItem="f36-dc-5T8" secondAttribute="bottom" id="kT7-gs-5Fh"/>
-                            <constraint firstItem="fSi-p9-JC8" firstAttribute="trailing" secondItem="f36-dc-5T8" secondAttribute="trailing" id="rB2-GU-aci"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="yxf-N1-BCO"/>
-                    <connections>
-                        <outlet property="tableView" destination="fSi-p9-JC8" id="vnn-9P-Ykx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qMx-2y-fLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Profiles" storyboardName="Profiles" id="TOS-0y-MBN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9T4-m2-OOH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPS-Es-gnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924.6376811594205" y="-1104.2410714285713"/>
+            <point key="canvasLocation" x="1364" y="-559"/>
         </scene>
         <!--Properties-->
         <scene sceneID="RDl-2K-hMz">
@@ -737,7 +644,6 @@
         <image name="Twitter Logo" width="100" height="100"/>
         <image name="Youtube Logo" width="100" height="100"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="desktopcomputer" catalog="system" width="128" height="101"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
