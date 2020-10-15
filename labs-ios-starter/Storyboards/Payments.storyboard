@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iz-8Q-Wka">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iz-8Q-Wka">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-b3-62l">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-b3-62l">
                                 <rect key="frame" x="20" y="747" width="374" height="50"/>
-                                <color key="backgroundColor" name="ESB Green"/>
+                                <color key="backgroundColor" name="ESB Blue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="k0Z-7D-aIK"/>
                                 </constraints>
@@ -26,15 +28,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spV-ba-lif">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spV-ba-lif">
                                 <rect key="frame" x="20" y="709" width="374" height="30"/>
                                 <state key="normal" title="Select Payment Method"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-hl-Vjb">
-                                <rect key="frame" x="20" y="156" width="374" height="393"/>
+                                <rect key="frame" x="20" y="104" width="374" height="339"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-wP-L6I">
-                                        <rect key="frame" x="20" y="20" width="334" height="353"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-wP-L6I">
+                                        <rect key="frame" x="20" y="20" width="334" height="299"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="blg-WG-0dq">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="78.5"/>
@@ -54,14 +56,14 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07a-9h-Rw6">
-                                                <rect key="frame" x="0.0" y="94.5" width="334" height="1.5"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="334" height="1.5"/>
                                                 <color key="backgroundColor" name="ESB System Background"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1.5" id="XcI-va-D5H"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iLx-I6-suO">
-                                                <rect key="frame" x="0.0" y="112" width="334" height="48.5"/>
+                                                <rect key="frame" x="0.0" y="94" width="334" height="48.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVOICE START DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4v-Zy-AYX">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="14.5"/>
@@ -78,7 +80,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ExB-Oa-M1A">
-                                                <rect key="frame" x="0.0" y="176.5" width="334" height="48.5"/>
+                                                <rect key="frame" x="0.0" y="149.5" width="334" height="48.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVOICE END DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRf-Kk-BdW">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="14.5"/>
@@ -95,7 +97,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-s0-OWv">
-                                                <rect key="frame" x="0.0" y="241" width="334" height="48.5"/>
+                                                <rect key="frame" x="0.0" y="205" width="334" height="48.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUE DATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoE-DT-DQr">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="14.5"/>
@@ -112,14 +114,14 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-du-Ckw">
-                                                <rect key="frame" x="0.0" y="305.5" width="334" height="1.5"/>
+                                                <rect key="frame" x="0.0" y="260.5" width="334" height="1.5"/>
                                                 <color key="backgroundColor" name="ESB System Background"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1.5" id="ARC-PA-Ksr"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="n7z-Mb-rDS">
-                                                <rect key="frame" x="0.0" y="323" width="334" height="30"/>
+                                                <rect key="frame" x="0.0" y="269" width="334" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVOICE #34DF2S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fo-oi-9qQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
@@ -127,7 +129,7 @@
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQX-lM-4wF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQX-lM-4wF">
                                                         <rect key="frame" x="184" y="0.0" width="150" height="30"/>
                                                         <color key="backgroundColor" name="ESB Blue"/>
                                                         <constraints>
@@ -145,7 +147,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="2L6-wP-L6I" firstAttribute="leading" secondItem="Q3R-hl-Vjb" secondAttribute="leading" constant="20" id="6jc-IO-1iR"/>
                                     <constraint firstAttribute="trailing" secondItem="2L6-wP-L6I" secondAttribute="trailing" constant="20" id="ORd-BZ-5wg"/>
@@ -153,7 +155,13 @@
                                     <constraint firstItem="2L6-wP-L6I" firstAttribute="top" secondItem="Q3R-hl-Vjb" secondAttribute="top" constant="20" id="ptT-N3-lz0"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9pU-Yi-38u">
+                                <rect key="frame" x="20" y="451" width="374" height="219"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lpr-GX-kMZ"/>
                         <color key="backgroundColor" name="ESB System Background"/>
                         <constraints>
                             <constraint firstItem="Lpr-GX-kMZ" firstAttribute="bottom" secondItem="1ZF-b3-62l" secondAttribute="bottom" constant="16" id="EIx-PG-9qf"/>
@@ -166,7 +174,6 @@
                             <constraint firstItem="1ZF-b3-62l" firstAttribute="leading" secondItem="Lpr-GX-kMZ" secondAttribute="leading" constant="20" id="rBh-Sh-Zcg"/>
                             <constraint firstItem="spV-ba-lif" firstAttribute="leading" secondItem="Lpr-GX-kMZ" secondAttribute="leading" constant="20" id="xht-sd-Opn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lpr-GX-kMZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Payments" id="v4k-5O-1J5">
                         <barButtonItem key="rightBarButtonItem" title="History" id="v9Q-F4-aLD"/>
@@ -191,7 +198,7 @@
             <objects>
                 <viewController id="LTH-G9-dEH" customClass="PaymentInvoiceViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AWA-TP-9yX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZq-kn-Qgw">
@@ -207,13 +214,13 @@
                                 </items>
                             </navigationBar>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="EWc-nf-hzg"/>
                         <color key="backgroundColor" name="ESB System Background"/>
                         <constraints>
                             <constraint firstItem="aZq-kn-Qgw" firstAttribute="leading" secondItem="EWc-nf-hzg" secondAttribute="leading" id="NVM-Jb-Kha"/>
                             <constraint firstItem="aZq-kn-Qgw" firstAttribute="top" secondItem="EWc-nf-hzg" secondAttribute="top" id="inQ-Jy-pQW"/>
                             <constraint firstItem="aZq-kn-Qgw" firstAttribute="trailing" secondItem="EWc-nf-hzg" secondAttribute="trailing" id="oNk-Xf-cMw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="EWc-nf-hzg"/>
                     </view>
                     <connections>
                         <outlet property="navBar" destination="aZq-kn-Qgw" id="s5M-Zv-IcK"/>
@@ -232,8 +239,8 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Rby-g0-2tD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rby-g0-2tD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -248,7 +255,7 @@
     </scenes>
     <color key="tintColor" name="ESB Green"/>
     <resources>
-        <image name="creditcard.fill" catalog="system" width="128" height="91"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <namedColor name="ESB Black">
             <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -264,5 +271,8 @@
         <namedColor name="ESB System Background">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
