@@ -19,6 +19,7 @@ class MakePaymentViewController: UIViewController {
     @IBOutlet weak var paymentBackgroundView: UIView!
     @IBOutlet weak var viewInvoiceButton: UIButton!
     @IBOutlet weak var makePaymentButton: UIButton!
+    @IBOutlet var paymentHistoryTableView: UITableView!
     
     // MARK: - Properties
     
@@ -48,4 +49,15 @@ class MakePaymentViewController: UIViewController {
     
     // MARK: - IBActions
 
+}
+extension MakePaymentViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
