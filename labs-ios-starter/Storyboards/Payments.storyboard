@@ -260,22 +260,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Lic-n1-Dpm">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Lic-n1-Dpm">
                                                     <rect key="frame" x="20" y="10" width="334" height="68.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVe-sS-BD5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVe-sS-BD5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="26.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="234 bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g13-Tp-Mov">
-                                                            <rect key="frame" x="0.0" y="26.5" width="334" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="234 bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g13-Tp-Mov">
+                                                            <rect key="frame" x="0.0" y="29.5" width="334" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 19, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHK-Nq-N1h">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="October 19, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHK-Nq-N1h">
                                                             <rect key="frame" x="0.0" y="50.5" width="334" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                             <nil key="textColor"/>
@@ -292,14 +292,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="barCount" destination="g13-Tp-Mov" id="65p-go-sw4"/>
+                                            <outlet property="dateLabel" destination="mHK-Nq-N1h" id="H2Y-JL-Zak"/>
+                                            <outlet property="organizationName" destination="JVe-sS-BD5" id="Lcc-qg-Ntf"/>
                                             <segue destination="AG4-eP-Wha" kind="show" id="G7m-wH-9Jp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5am-WH-lY0">
-                                <rect key="frame" x="20" y="763" width="374" height="30"/>
+                                <rect key="frame" x="20" y="749" width="374" height="44"/>
                                 <color key="backgroundColor" name="ESB Blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="U39-CX-6FB"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="New order"/>
                                 <connections>
@@ -355,7 +361,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xk-5B-yXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="119.86607142857142"/>
+            <point key="canvasLocation" x="-722" y="-638"/>
         </scene>
         <!--New Order-->
         <scene sceneID="NLA-8H-JHW">
@@ -366,8 +372,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-Sh-S8k">
-                                <rect key="frame" x="20" y="763" width="374" height="30"/>
+                                <rect key="frame" x="20" y="749" width="374" height="44"/>
                                 <color key="backgroundColor" name="ESB Blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oF2-CN-5IK"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Submit"/>
                             </button>
@@ -491,9 +500,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-s0-Z7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763.768115942029" y="-638.16964285714278"/>
+            <point key="canvasLocation" x="1448" y="-638"/>
         </scene>
-        <!--Order Number-->
+        <!--Order #12345-->
         <scene sceneID="UUL-9B-mR4">
             <objects>
                 <viewController id="AG4-eP-Wha" sceneMemberID="viewController">
@@ -602,23 +611,66 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flm-i6-y5T">
+                                <rect key="frame" x="20" y="749" width="156" height="44"/>
+                                <color key="backgroundColor" name="ESB Blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="3Ug-ee-1Fn"/>
+                                    <constraint firstAttribute="height" constant="44" id="DT9-HS-Axl"/>
+                                </constraints>
+                                <state key="normal" title="Close out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="42I-pN-wak" kind="show" id="gIk-ne-lJL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwe-Nf-fL6">
+                                <rect key="frame" x="238" y="749" width="156" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="32v-AV-aOY"/>
+                                    <constraint firstAttribute="height" constant="44" id="hbu-co-Fzg"/>
+                                </constraints>
+                                <color key="tintColor" name="ESB Blue"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NUg-Zx-1Ea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VZo-He-Av0" firstAttribute="top" secondItem="NUg-Zx-1Ea" secondAttribute="top" constant="20" id="29l-ge-Ylq"/>
+                            <constraint firstItem="NUg-Zx-1Ea" firstAttribute="bottom" secondItem="xwe-Nf-fL6" secondAttribute="bottom" constant="20" id="4F6-78-7BC"/>
                             <constraint firstItem="NUg-Zx-1Ea" firstAttribute="trailing" secondItem="tit-Uv-W5A" secondAttribute="trailing" constant="20" id="5h0-fc-4SL"/>
                             <constraint firstItem="tit-Uv-W5A" firstAttribute="leading" secondItem="NUg-Zx-1Ea" secondAttribute="leading" constant="20" id="7NR-j5-UiO"/>
+                            <constraint firstItem="NUg-Zx-1Ea" firstAttribute="bottom" secondItem="Flm-i6-y5T" secondAttribute="bottom" constant="20" id="ciB-Ab-CTn"/>
+                            <constraint firstItem="NUg-Zx-1Ea" firstAttribute="trailing" secondItem="xwe-Nf-fL6" secondAttribute="trailing" constant="20" id="e4R-01-qxm"/>
                             <constraint firstItem="NUg-Zx-1Ea" firstAttribute="trailing" secondItem="VZo-He-Av0" secondAttribute="trailing" constant="20" id="hCR-RL-H3j"/>
                             <constraint firstItem="VZo-He-Av0" firstAttribute="leading" secondItem="NUg-Zx-1Ea" secondAttribute="leading" constant="20" id="ixo-VG-bOW"/>
+                            <constraint firstItem="Flm-i6-y5T" firstAttribute="leading" secondItem="NUg-Zx-1Ea" secondAttribute="leading" constant="20" id="m6n-zj-V3B"/>
                             <constraint firstItem="tit-Uv-W5A" firstAttribute="top" secondItem="VZo-He-Av0" secondAttribute="bottom" constant="10" id="x24-R1-hEe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Order Number" id="QUa-fd-uIJ"/>
+                    <navigationItem key="navigationItem" title="Order #12345" id="QUa-fd-uIJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zg-xY-eho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-1315"/>
+            <point key="canvasLocation" x="1448" y="-1331"/>
+        </scene>
+        <!--Close Out Order-->
+        <scene sceneID="WTx-9L-QqJ">
+            <objects>
+                <viewController id="42I-pN-wak" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RkW-sx-OMD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B1F-M1-hDR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Close Out Order" id="DvK-ml-rtS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnB-lc-cwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="-1331"/>
         </scene>
     </scenes>
     <color key="tintColor" name="ESB Green"/>

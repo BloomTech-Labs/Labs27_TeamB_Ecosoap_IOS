@@ -15,6 +15,9 @@ class OrderTableViewCell: UITableViewCell {
     
     //MARK: - IBOutlets
     
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var barCount: UILabel!
+    @IBOutlet var organizationName: UILabel!
     //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()

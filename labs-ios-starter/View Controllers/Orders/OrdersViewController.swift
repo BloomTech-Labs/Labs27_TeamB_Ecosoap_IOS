@@ -11,6 +11,10 @@ import UIKit
 class OrdersViewController: UIViewController {
     
     //MARK: - Properties
+    // Dummy Data to populate Table View
+    var orgName = "Dummy Organization"
+    var barCount = "32 bars"
+    var date = "October 19, 2020"
     
     //MARK: - IBOutlets
     @IBOutlet var tableView: UITableView!
@@ -19,6 +23,7 @@ class OrdersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
     }
     
     //MARK: - Helpers
@@ -37,11 +42,17 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
         return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.reuseIdentifier, for: <#T##IndexPath#>)
+        let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.reuseIdentifier, for: indexPath) as! OrderTableViewCell
+        cell.barCount.text = self.barCount
+        cell.organizationName.text = self.orgName
+        cell.dateLabel.text = self.date
+        
+        
+        return cell
     }
     
     
