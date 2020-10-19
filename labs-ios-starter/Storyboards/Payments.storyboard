@@ -246,10 +246,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DAK-eg-7mC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DAK-eg-7mC">
                                 <rect key="frame" x="20" y="110" width="374" height="447"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="447" id="olr-Da-6Qp"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderCell" rowHeight="90" id="uLn-Hn-7Hg" customClass="OrderTableViewCell" customModule="labs_ios_starter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="90"/>
@@ -289,12 +291,40 @@
                                                 <constraint firstAttribute="bottom" secondItem="Lic-n1-Dpm" secondAttribute="bottom" constant="11.5" id="uIG-Vt-f5a"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="AG4-eP-Wha" kind="show" id="G7m-wH-9Jp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5am-WH-lY0">
+                                <rect key="frame" x="20" y="763" width="374" height="30"/>
+                                <color key="backgroundColor" name="ESB Blue"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="New order"/>
+                                <connections>
+                                    <segue destination="cEh-Zj-OIQ" kind="show" id="ZRV-8H-U8u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW8-oI-BSi">
+                                <rect key="frame" x="20" y="565" width="61" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="tintColor" name="ESB Blue"/>
+                                <state key="normal" title="Show more"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JhU-Hk-RiH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AW8-oI-BSi" firstAttribute="top" secondItem="DAK-eg-7mC" secondAttribute="bottom" constant="8" symbolic="YES" id="5LG-zc-ZCN"/>
+                            <constraint firstItem="AW8-oI-BSi" firstAttribute="leading" secondItem="JhU-Hk-RiH" secondAttribute="leading" constant="20" id="890-qQ-GwS"/>
+                            <constraint firstItem="DAK-eg-7mC" firstAttribute="centerX" secondItem="lcd-W4-dSM" secondAttribute="centerX" id="BgW-Yl-mWi"/>
+                            <constraint firstItem="5am-WH-lY0" firstAttribute="leading" secondItem="JhU-Hk-RiH" secondAttribute="leading" constant="20" id="FxK-CB-lCp"/>
+                            <constraint firstItem="JhU-Hk-RiH" firstAttribute="trailing" secondItem="5am-WH-lY0" secondAttribute="trailing" constant="20" id="MWa-2d-0fi"/>
+                            <constraint firstItem="JhU-Hk-RiH" firstAttribute="bottom" secondItem="5am-WH-lY0" secondAttribute="bottom" constant="20" id="jLU-dq-VRk"/>
+                            <constraint firstItem="DAK-eg-7mC" firstAttribute="leading" secondItem="AW8-oI-BSi" secondAttribute="leading" id="mGX-rb-bys"/>
+                            <constraint firstItem="DAK-eg-7mC" firstAttribute="top" secondItem="JhU-Hk-RiH" secondAttribute="top" constant="22" id="mfU-gM-ASS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Orders" id="ggH-uk-JTO"/>
                     <connections>
@@ -327,35 +357,268 @@
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="119.86607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--New Order-->
         <scene sceneID="NLA-8H-JHW">
             <objects>
                 <viewController id="cEh-Zj-OIQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TXQ-P9-ueL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-Sh-S8k">
+                                <rect key="frame" x="20" y="763" width="374" height="30"/>
+                                <color key="backgroundColor" name="ESB Blue"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-Jc-H1z">
+                                <rect key="frame" x="20" y="503.5" width="374" height="135.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osv-45-59t">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type your notes here..." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="BN8-Ok-kCE">
+                                        <rect key="frame" x="0.0" y="55.5" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Jx9-ql-l7c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BYv-vl-Ml3">
+                                <rect key="frame" x="20" y="110" width="374" height="385.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aja-al-lKI">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAq-eK-vCR">
+                                        <rect key="frame" x="0.0" y="28" width="124" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zl-Ru-kHM">
+                                        <rect key="frame" x="0.0" y="56.5" width="111.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dla-Ne-NnT">
+                                        <rect key="frame" x="0.0" y="84.5" width="87.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total revenue from sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-bI-CqA">
+                                        <rect key="frame" x="0.0" y="113" width="166.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMk-wB-avE">
+                                        <rect key="frame" x="0.0" y="141" width="9" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of beneficiaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-lm-xfX">
+                                        <rect key="frame" x="0.0" y="169.5" width="172" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tg6-q4-PX8">
+                                        <rect key="frame" x="0.0" y="197.5" width="87.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyj-7B-7Ng">
+                                        <rect key="frame" x="0.0" y="226" width="77.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter buyer type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-7k-HYd">
+                                        <rect key="frame" x="0.0" y="254" width="107" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer contact name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-lf-oo2">
+                                        <rect key="frame" x="0.0" y="282.5" width="143.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwU-bh-GhB">
+                                        <rect key="frame" x="0.0" y="310.5" width="73.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer contact information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-ij-UmS">
+                                        <rect key="frame" x="0.0" y="339" width="186" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-tH-MZI">
+                                        <rect key="frame" x="0.0" y="367" width="132" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q7t-WD-Uyn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q7t-WD-Uyn" firstAttribute="trailing" secondItem="RvT-Sh-S8k" secondAttribute="trailing" constant="20" id="CC8-hF-KDi"/>
+                            <constraint firstItem="Q7t-WD-Uyn" firstAttribute="trailing" secondItem="nZ4-Jc-H1z" secondAttribute="trailing" constant="20" id="H12-ww-gwD"/>
+                            <constraint firstItem="Q7t-WD-Uyn" firstAttribute="bottom" secondItem="RvT-Sh-S8k" secondAttribute="bottom" constant="20" id="IGQ-Rk-ztm"/>
+                            <constraint firstItem="nZ4-Jc-H1z" firstAttribute="leading" secondItem="Q7t-WD-Uyn" secondAttribute="leading" constant="20" id="Im7-Eq-cyH"/>
+                            <constraint firstItem="RvT-Sh-S8k" firstAttribute="leading" secondItem="Q7t-WD-Uyn" secondAttribute="leading" constant="20" id="Mo0-EN-3ec"/>
+                            <constraint firstItem="Q7t-WD-Uyn" firstAttribute="trailing" secondItem="BYv-vl-Ml3" secondAttribute="trailing" constant="20" id="NAx-nc-G3S"/>
+                            <constraint firstItem="nZ4-Jc-H1z" firstAttribute="top" secondItem="BYv-vl-Ml3" secondAttribute="bottom" constant="10" id="Vnd-Lo-QdG"/>
+                            <constraint firstItem="BYv-vl-Ml3" firstAttribute="top" secondItem="Q7t-WD-Uyn" secondAttribute="top" constant="20" id="fUL-81-wv0"/>
+                            <constraint firstItem="BYv-vl-Ml3" firstAttribute="leading" secondItem="Q7t-WD-Uyn" secondAttribute="leading" constant="20" id="ncc-XQ-2Uj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Order" id="Ufg-Wr-0mM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-s0-Z7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-638"/>
+            <point key="canvasLocation" x="763.768115942029" y="-638.16964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Number-->
         <scene sceneID="UUL-9B-mR4">
             <objects>
                 <viewController id="AG4-eP-Wha" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IN-gr-RQI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-He-Av0">
+                                <rect key="frame" x="20" y="108" width="374" height="385.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaw-8s-mXX">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization 123" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DVs-jq-Rxt">
+                                        <rect key="frame" x="0.0" y="28" width="109.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXX-Cm-0BH">
+                                        <rect key="frame" x="0.0" y="56.5" width="111.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-9z-ooO">
+                                        <rect key="frame" x="0.0" y="84.5" width="87.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total revenue from sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-rc-urG">
+                                        <rect key="frame" x="0.0" y="113" width="166.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0QO-XO-iGj">
+                                        <rect key="frame" x="0.0" y="141" width="9" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of beneficiaries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbL-4o-Zlk">
+                                        <rect key="frame" x="0.0" y="169.5" width="172" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPD-LG-52b">
+                                        <rect key="frame" x="0.0" y="197.5" width="87.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-EQ-cP5">
+                                        <rect key="frame" x="0.0" y="226" width="77.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter buyer type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7is-Zr-y2X">
+                                        <rect key="frame" x="0.0" y="254" width="107" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer contact name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-ga-aLK">
+                                        <rect key="frame" x="0.0" y="282.5" width="143.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACt-Kf-dmG">
+                                        <rect key="frame" x="0.0" y="310.5" width="73.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer contact information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mm-Zw-oyw">
+                                        <rect key="frame" x="0.0" y="339" width="186" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-Pb-b2q">
+                                        <rect key="frame" x="0.0" y="367" width="132" height="18.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="tit-Uv-W5A">
+                                <rect key="frame" x="20" y="503.5" width="374" height="135.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-rk-vaa">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type your notes here..." textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-BU-l4a">
+                                        <rect key="frame" x="0.0" y="55.5" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="vV7-7i-uVD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NUg-Zx-1Ea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZo-He-Av0" firstAttribute="top" secondItem="NUg-Zx-1Ea" secondAttribute="top" constant="20" id="29l-ge-Ylq"/>
+                            <constraint firstItem="NUg-Zx-1Ea" firstAttribute="trailing" secondItem="tit-Uv-W5A" secondAttribute="trailing" constant="20" id="5h0-fc-4SL"/>
+                            <constraint firstItem="tit-Uv-W5A" firstAttribute="leading" secondItem="NUg-Zx-1Ea" secondAttribute="leading" constant="20" id="7NR-j5-UiO"/>
+                            <constraint firstItem="NUg-Zx-1Ea" firstAttribute="trailing" secondItem="VZo-He-Av0" secondAttribute="trailing" constant="20" id="hCR-RL-H3j"/>
+                            <constraint firstItem="VZo-He-Av0" firstAttribute="leading" secondItem="NUg-Zx-1Ea" secondAttribute="leading" constant="20" id="ixo-VG-bOW"/>
+                            <constraint firstItem="tit-Uv-W5A" firstAttribute="top" secondItem="VZo-He-Av0" secondAttribute="bottom" constant="10" id="x24-R1-hEe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Order Number" id="QUa-fd-uIJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zg-xY-eho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459" y="-638"/>
+            <point key="canvasLocation" x="764" y="-1315"/>
         </scene>
     </scenes>
     <color key="tintColor" name="ESB Green"/>
