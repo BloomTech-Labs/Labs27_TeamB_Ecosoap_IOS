@@ -13,14 +13,14 @@ class ProfileController {
     
     static let shared = ProfileController()
     
-    let oktaAuth = OktaAuth(baseURL: URL(string: "https://auth.lambdalabs.dev/")!,
-                            clientID: "0oalwkxvqtKeHBmLI4x6",
+    let oktaAuth = OktaAuth(baseURL: URL(string: "https://dev-668428.okta.com/")!,
+                            clientID: "0oapaqacafrGUTfKx4x6",
                             redirectURI: "labs://scaffolding/implicit/callback")
     
     private(set) var authenticatedUserProfile: Profile?
     private(set) var profiles: [Profile] = []
     
-    private let baseURL = URL(string: "https://labs-api-starter.herokuapp.com/")!
+    private let baseURL = URL(string: "https://dev-668428.okta.com/")!
     
     private init() {
         NotificationCenter.default.addObserver(self,
