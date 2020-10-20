@@ -9,14 +9,37 @@
 import UIKit
 
 class NewOrderViewController: UIViewController {
-
+    
+    //MARK: - Properties
+    
+    //MARK: -IBOutlet
+    
+    @IBOutlet var orgNameTF: UITextField!
+    @IBOutlet var barCountTF: UITextField!
+    @IBOutlet var orderRevenueTF: UITextField!
+    @IBOutlet var beneficiariesCountTF: UITextField!
+    @IBOutlet var orderNotesTF: UITextField!
+    @IBOutlet var buyerPhoneTF: UITextField!
+    @IBOutlet var buyerNameTF: UITextField!
+    @IBOutlet var buyerTypeTF: UITextField!
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    //MARK: - Helpers
+    
+    //Setup UI
+    func configureUI() {
+        
+    }
+    
+    //MARK: - IBActions
+    
+    @IBAction func submitOrderButton(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

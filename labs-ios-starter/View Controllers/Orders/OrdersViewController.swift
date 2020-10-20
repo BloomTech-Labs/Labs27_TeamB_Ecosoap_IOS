@@ -20,7 +20,7 @@ class OrdersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     //MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -32,7 +32,6 @@ class OrdersViewController: UIViewController {
     func configureUI() {
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
 }
 
@@ -41,6 +40,7 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -55,5 +55,18 @@ extension OrdersViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let sectionName: String
+        switch section {
+        case 0:
+            sectionName = NSLocalizedString("Open", comment: "mySectionName")
+        case 1:
+            sectionName = NSLocalizedString("Closed", comment: "myOtherSectionName")
+        // ...
+        default:
+            sectionName = ""
+        }
+        return sectionName
+    }
 }
