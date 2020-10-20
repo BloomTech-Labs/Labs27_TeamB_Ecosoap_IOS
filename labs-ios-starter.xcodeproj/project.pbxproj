@@ -12,7 +12,6 @@
 		13518FBB2509C15D000C217F /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13518FBA2509C15D000C217F /* PropertyTableViewCell.swift */; };
 		1380291A24E63E820000C9FA /* StatisticsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380291924E63E820000C9FA /* StatisticsLayout.swift */; };
 		1385B7692515A02A00953FD4 /* Payments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1385B7682515A02A00953FD4 /* Payments.storyboard */; };
-		1385B76B2515ACC000953FD4 /* MakePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1385B76A2515ACC000953FD4 /* MakePaymentViewController.swift */; };
 		1385B76D2515ADEF00953FD4 /* PaymentInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1385B76C2515ADEF00953FD4 /* PaymentInvoiceViewController.swift */; };
 		13A4A7CD24E1F332005326F9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A4A7CC24E1F332005326F9 /* Dashboard.storyboard */; };
 		13A4A7CF24E1F34D005326F9 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A4A7CE24E1F34D005326F9 /* Statistics.storyboard */; };
@@ -88,6 +87,11 @@
 		9CEA63C124EF5E7800A2C446 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA63C024EF5E7800A2C446 /* Payment.swift */; };
 		BB627598252DF38F0052CA14 /* ExistingReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB627597252DF38F0052CA14 /* ExistingReportViewController.swift */; };
 		BB991B6F252CB4620010088D /* NewReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB991B6E252CB4620010088D /* NewReportViewController.swift */; };
+		BBA1EA07253DC5EF00DA84FF /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1EA06253DC5EF00DA84FF /* OrdersViewController.swift */; };
+		BBA1EA0B253DC60E00DA84FF /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1EA0A253DC60E00DA84FF /* NewOrderViewController.swift */; };
+		BBA1EA0F253DC6E800DA84FF /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1EA0E253DC6E800DA84FF /* OrderTableViewCell.swift */; };
+		BBE172D1253F146400303432 /* EditOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE172D0253F146400303432 /* EditOrderViewController.swift */; };
+		BBE172D4253F147E00303432 /* CloseOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE172D3253F147E00303432 /* CloseOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +100,6 @@
 		13518FBA2509C15D000C217F /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		1380291924E63E820000C9FA /* StatisticsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsLayout.swift; sourceTree = "<group>"; };
 		1385B7682515A02A00953FD4 /* Payments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payments.storyboard; sourceTree = "<group>"; };
-		1385B76A2515ACC000953FD4 /* MakePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePaymentViewController.swift; sourceTree = "<group>"; };
 		1385B76C2515ADEF00953FD4 /* PaymentInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInvoiceViewController.swift; sourceTree = "<group>"; };
 		13A4A7CC24E1F332005326F9 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		13A4A7CE24E1F34D005326F9 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
@@ -174,6 +177,11 @@
 		9CEA63C024EF5E7800A2C446 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		BB627597252DF38F0052CA14 /* ExistingReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistingReportViewController.swift; sourceTree = "<group>"; };
 		BB991B6E252CB4620010088D /* NewReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReportViewController.swift; sourceTree = "<group>"; };
+		BBA1EA06253DC5EF00DA84FF /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		BBA1EA0A253DC60E00DA84FF /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
+		BBA1EA0E253DC6E800DA84FF /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		BBE172D0253F146400303432 /* EditOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOrderViewController.swift; sourceTree = "<group>"; };
+		BBE172D3253F147E00303432 /* CloseOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +199,6 @@
 		1385B76E2515ADF500953FD4 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
-				1385B76A2515ACC000953FD4 /* MakePaymentViewController.swift */,
 				1385B76C2515ADEF00953FD4 /* PaymentInvoiceViewController.swift */,
 			);
 			path = Payments;
@@ -235,6 +242,7 @@
 		13A4A7D724E1F8DE005326F9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BBA1EA05253DC5E000DA84FF /* Orders */,
 				13A4A7D624E1F8D4005326F9 /* Dashboard */,
 				13A4A7EC24E3592C005326F9 /* Pickups */,
 				13DC372224E5EFA800AE20B3 /* Impact Statistics */,
@@ -261,6 +269,7 @@
 		13A4A7E324E20353005326F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BBA1EA0D253DC6D300DA84FF /* Orders */,
 				13A4A7E424E2035F005326F9 /* Dashboard */,
 				13FD2A9A24E457A5006D6B43 /* Pickups */,
 				13DC372724E63C0E00AE20B3 /* Impact Statistics */,
@@ -501,6 +510,25 @@
 			path = "Production Reports";
 			sourceTree = "<group>";
 		};
+		BBA1EA05253DC5E000DA84FF /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				BBA1EA06253DC5EF00DA84FF /* OrdersViewController.swift */,
+				BBA1EA0A253DC60E00DA84FF /* NewOrderViewController.swift */,
+				BBE172D0253F146400303432 /* EditOrderViewController.swift */,
+				BBE172D3253F147E00303432 /* CloseOrderViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		BBA1EA0D253DC6D300DA84FF /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				BBA1EA0E253DC6E800DA84FF /* OrderTableViewCell.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -587,6 +615,7 @@
 				9C9ACA7E24F779D2002D47B5 /* String.swift in Sources */,
 				13FD2AA024E46A72006D6B43 /* SelectPropertyViewController.swift in Sources */,
 				9C364A9A24F6310E00FF204D /* Request.swift in Sources */,
+				BBA1EA0B253DC60E00DA84FF /* NewOrderViewController.swift in Sources */,
 				13BA9FE225001A8500973F03 /* PropertiesViewController.swift in Sources */,
 				46BEB4EE24C98ECC00FE0CD1 /* ProfileController.swift in Sources */,
 				13E0E39F24F819BC008AE0F8 /* PickupCartonTableViewCell.swift in Sources */,
@@ -613,6 +642,8 @@
 				1380291A24E63E820000C9FA /* StatisticsLayout.swift in Sources */,
 				9C9A98E124E4EF3C007FC7DA /* Queries.swift in Sources */,
 				463AD24524CF2CDB00447BB8 /* AddProfileViewController.swift in Sources */,
+				BBE172D4253F147E00303432 /* CloseOrderViewController.swift in Sources */,
+				BBA1EA0F253DC6E800DA84FF /* OrderTableViewCell.swift in Sources */,
 				13A4A7DE24E1FB1E005326F9 /* HelperExtensions.swift in Sources */,
 				466C4274249A8748007D033E /* AppDelegate.swift in Sources */,
 				13DC372624E63C0A00AE20B3 /* ImpactStatisticsOverallCollectionViewCell.swift in Sources */,
@@ -629,7 +660,6 @@
 				13A4A7D524E1F8CF005326F9 /* DashboardViewController.swift in Sources */,
 				1326A737250FFD4000EFA7CF /* PropertyInfoTableViewCell.swift in Sources */,
 				72C499D72534F228005E1C2B /* Ecosoap.xcdatamodeld in Sources */,
-				1385B76B2515ACC000953FD4 /* MakePaymentViewController.swift in Sources */,
 				13FD2A9C24E45C79006D6B43 /* AddPickupCartonTableViewCell.swift in Sources */,
 				1385B76D2515ADEF00953FD4 /* PaymentInvoiceViewController.swift in Sources */,
 				46C2BC9224D432F90077E49D /* ProfileTabBarViewController.swift in Sources */,
@@ -650,7 +680,9 @@
 				9C9ACA6C24F71F8C002D47B5 /* CancelPickupInput.swift in Sources */,
 				46BEB4E524C98CDC00FE0CD1 /* LoginViewControllerStarter.swift in Sources */,
 				9CEA63B624EE24A700A2C446 /* APIEnums.swift in Sources */,
+				BBE172D1253F146400303432 /* EditOrderViewController.swift in Sources */,
 				466C4276249A8748007D033E /* SceneDelegate.swift in Sources */,
+				BBA1EA07253DC5EF00DA84FF /* OrdersViewController.swift in Sources */,
 				9C9ACA7924F76248002D47B5 /* UpdatePropertyInput.swift in Sources */,
 				9C9A98EA24E508BE007FC7DA /* Pickup.swift in Sources */,
 				9C9ACA7524F7524C002D47B5 /* CoordinatesInput.swift in Sources */,
@@ -801,7 +833,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36JMR38FZL;
+				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "labs-ios-starter/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -820,7 +852,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36JMR38FZL;
+				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "labs-ios-starter/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
