@@ -59,8 +59,12 @@ extension ProfileListViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath)
         
         let profile = profileController.profiles[indexPath.row]
-        cell.textLabel?.text = profile.name
-        cell.detailTextLabel?.text = profile.email
+        cell.textLabel?.text = profile.firstName
+        cell.textLabel
+        
+        
+//        cell.textLabel?.text = profile.name
+//        cell.detailTextLabel?.text = profile.email
         
         return cell
     }

@@ -13,11 +13,21 @@ class PickupDetailViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var propertyNameLabel: UILabel!
     
-    @IBOutlet weak var view1: UIView!
-    @IBOutlet weak var view2: UIView!
-    @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var view4: UIView!
-    @IBOutlet weak var view5: UIView!
+//    @IBOutlet weak var view1: UIView!
+//    @IBOutlet weak var view2: UIView!
+//    @IBOutlet weak var view3: UIView!
+//    @IBOutlet weak var view4: UIView!
+//    @IBOutlet weak var view5: UIView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var driverLabel: UILabel!
+    @IBOutlet weak var soapLabel: UILabel!
+    @IBOutlet weak var paperLabel: UILabel!
+    @IBOutlet weak var linensLabel: UILabel!
+    @IBOutlet weak var bottlesLabel: UILabel!
+    @IBOutlet weak var pickupNotes: UILabel!
+    
     
     // MARK: - Properties
     var controller: BackendController?
@@ -31,11 +41,11 @@ class PickupDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        view1.layer.cornerRadius = 8
-        view2.layer.cornerRadius = 8
-        view3.layer.cornerRadius = 8
-        view4.layer.cornerRadius = 8
-        view5.layer.cornerRadius = 8
+//        view1.layer.cornerRadius = 8
+//        view2.layer.cornerRadius = 8
+//        view3.layer.cornerRadius = 8
+//        view4.layer.cornerRadius = 8
+//        view5.layer.cornerRadius = 8
     }
     
     // MARK: - Private Methods
@@ -77,6 +87,14 @@ class PickupDetailViewController: UIViewController {
     
     private func updateViews() {
         
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func editButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
     }
     
     // MARK: - Navigation
