@@ -4,6 +4,7 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="percentFull" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="product" optional="YES" attributeType="String"/>
+        <relationship name="pickup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PickUp" inverseName="cartons" inverseEntity="PickUp"/>
     </entity>
     <entity name="Driver" representedClassName="Driver" syncable="YES" codeGenerationType="class">
         <attribute name="firstName" optional="YES" attributeType="String"/>
@@ -19,7 +20,9 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HubUser" inverseName="hub" inverseEntity="HubUser"/>
         <relationship name="impactReports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImpactReport" inverseName="hub" inverseEntity="ImpactReport"/>
+        <relationship name="pickups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PickUp" inverseName="property" inverseEntity="PickUp"/>
     </entity>
     <entity name="HubUser" representedClassName="HubUser" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String"/>
@@ -35,6 +38,7 @@
         <attribute name="role" optional="YES" attributeType="String"/>
         <attribute name="skype" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="hub" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HubFacility" inverseName="employee" inverseEntity="HubFacility"/>
     </entity>
     <entity name="ImpactReport" representedClassName="ImpactReport" syncable="YES" codeGenerationType="class">
         <attribute name="bottlesRecycled" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -54,16 +58,16 @@
         <attribute name="pickupDate" optional="YES" attributeType="String"/>
         <attribute name="readyDate" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="String"/>
-        <relationship name="cartons" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Carton"/>
+        <relationship name="cartons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carton" inverseName="pickup" inverseEntity="Carton"/>
         <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="pickup" inverseEntity="Driver"/>
-        <relationship name="property" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HubFacility"/>
+        <relationship name="property" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HubFacility" inverseName="pickups" inverseEntity="HubFacility"/>
     </entity>
     <elements>
-        <element name="Carton" positionX="236.90234375" positionY="-126.57421875" width="128" height="88"/>
-        <element name="Driver" positionX="-78.83203125" positionY="30.875" width="128" height="103"/>
-        <element name="HubFacility" positionX="-346.4375" positionY="-200.87890625" width="128" height="163"/>
-        <element name="ImpactReport" positionX="37.046875" positionY="-349.15625" width="128" height="148"/>
-        <element name="PickUp" positionX="215.28515625" positionY="16.5859375" width="128" height="208"/>
-        <element name="HubUser" positionX="-331.81640625" positionY="40.47265625" width="128" height="238"/>
+        <element name="Carton" positionX="142.72265625" positionY="-225.4140625" width="128" height="103"/>
+        <element name="Driver" positionX="205.31640625" positionY="-101.3203125" width="128" height="103"/>
+        <element name="HubFacility" positionX="-346.4375" positionY="-200.87890625" width="128" height="193"/>
+        <element name="HubUser" positionX="-577.9453125" positionY="-256.6796875" width="128" height="253"/>
+        <element name="ImpactReport" positionX="-81.1640625" positionY="-271.22265625" width="128" height="148"/>
+        <element name="PickUp" positionX="-81.44140625" positionY="-79.328125" width="128" height="208"/>
     </elements>
 </model>

@@ -201,10 +201,13 @@ class Queries: Request {
         password
         phone
         skype
+        address
         signupTime
+        role
         properties {
             id
         }
+        hub
         }
         }
         }
