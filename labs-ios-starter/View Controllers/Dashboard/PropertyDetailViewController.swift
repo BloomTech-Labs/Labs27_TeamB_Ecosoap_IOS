@@ -24,7 +24,7 @@ class PropertyDetailViewController: UIViewController {
     private var saveButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(named: .colorESBGreen)
+        button.backgroundColor = UIColor(named: .colorESBBlue)
         button.setTitle("Save Changes", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true

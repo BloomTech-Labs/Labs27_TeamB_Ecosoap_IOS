@@ -34,7 +34,6 @@ extension String {
     static var colorESBBlue = "ESB Blue"
     static var colorESBBrick = "ESB Brick"
     static var colorESBGold = "ESB Gold"
-    static var colorESBGreen = "ESB Green"
     static var colorESBMagenta = "ESB Magenta"
     static var colorESBOrange = "ESB Orange"
     static var colorESBPink = "ESB Pink"
