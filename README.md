@@ -1,4 +1,4 @@
-# Human Rights First Police Use of Force Map
+# Eco-Soap iOS Application Team II
 
 You can find the deployed project at [EcoSoap](https://github.com/Lambda-School-Labs/Labs27_TeamB_Ecosoap_IOS)
 
@@ -21,9 +21,13 @@ You can find the deployed project at [EcoSoap](https://github.com/Lambda-School-
 
 # Project Overview
 
+[Link to Video] (https://youtu.be/0ZSGVc79nF8)
+
 [Trello Board](https://trello.com/b/plagLSzk)
 
 [Product Canvas](https://whimsical.com/8SpDv2ia98KuXzHeh51qBk)
+
+*Please see screenshots of Application in Mock Up Folder*
 
 Eco-Soap Bank is a humanitarian and environmental non-profit organization working to save, sanitize, and supply recycled hotel soap for the developing world. Our work has three objectives:
   * Contribute a highly cost-effective hygiene product to improve health
