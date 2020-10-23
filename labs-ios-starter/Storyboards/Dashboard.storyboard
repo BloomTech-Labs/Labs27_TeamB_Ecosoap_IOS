@@ -36,6 +36,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-0P-Fav">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <color key="tintColor" name="ESB Blue"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="TKs-Vz-sbB"/>
                                                                 <constraint firstAttribute="width" secondItem="ahl-0P-Fav" secondAttribute="height" multiplier="1:1" id="hTD-xY-QCN"/>
@@ -150,8 +151,9 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ESB Property" translatesAutoresizingMaskIntoConstraints="NO" id="OdB-sY-UCo">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OdB-sY-UCo">
                                                             <rect key="frame" x="16" y="17" width="50" height="50"/>
+                                                            <color key="tintColor" name="ESB Blue"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="LkX-ke-42H"/>
                                                                 <constraint firstAttribute="height" constant="50" id="eHV-Et-adi"/>
@@ -159,6 +161,7 @@
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-Ag-8fr">
                                                             <rect key="frame" x="347" y="18" width="15" height="48.5"/>
+                                                            <color key="tintColor" name="ESB Blue"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="uzl-1C-TRq"/>
                                                             </constraints>
@@ -331,7 +334,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-r6-vbH">
                                                     <rect key="frame" x="20" y="12.5" width="21" height="17.5"/>
-                                                    <color key="tintColor" name="ESB Green"/>
+                                                    <color key="tintColor" name="ESB Blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="bCa-r6-vbH" secondAttribute="height" multiplier="1:1" id="knp-Oy-RUQ"/>
                                                     </constraints>
@@ -343,6 +346,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="tintColor" name="ESB Blue"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bCa-r6-vbH" secondAttribute="bottom" id="OiZ-d6-D2n"/>
                                                 <constraint firstItem="H9k-TP-aLc" firstAttribute="centerY" secondItem="pOr-by-3wN" secondAttribute="centerY" id="Pbh-oq-gLr"/>
@@ -361,7 +365,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kub-8Z-Mhh">
                                                     <rect key="frame" x="20" y="12.5" width="21" height="18.5"/>
-                                                    <color key="tintColor" name="ESB Green"/>
+                                                    <color key="tintColor" name="ESB Blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kub-8Z-Mhh" secondAttribute="height" multiplier="1:1" id="Qpr-dq-dua"/>
                                                     </constraints>
@@ -391,7 +395,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desktopcomputer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-ns-kun">
                                                     <rect key="frame" x="20" y="11.5" width="21" height="20"/>
-                                                    <color key="tintColor" name="ESB Green"/>
+                                                    <color key="tintColor" name="ESB Blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="pXb-ns-kun" secondAttribute="height" multiplier="1:1" id="zl9-wf-bja"/>
                                                     </constraints>
@@ -583,7 +587,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="ESB Green"/>
+                        <color key="tintColor" name="ESB Blue"/>
+                        <color key="selectedImageTintColor" name="ESB Blue"/>
                     </tabBar>
                     <connections>
                         <segue destination="AXZ-ks-3AO" kind="relationship" relationship="viewControllers" id="dbh-Vl-jkp"/>
@@ -637,17 +642,20 @@
     </scenes>
     <color key="tintColor" name="ESB Green"/>
     <resources>
-        <image name="ESB Property" width="85" height="124"/>
         <image name="Facebook Logo" width="100" height="100"/>
         <image name="Instagram Logo" width="100" height="100"/>
         <image name="LinkedIn Logo" width="100" height="100"/>
         <image name="Twitter Logo" width="100" height="100"/>
         <image name="Youtube Logo" width="100" height="100"/>
+        <image name="building" catalog="system" width="112" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="desktopcomputer" catalog="system" width="128" height="101"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="rectangle.3.offgrid.fill" catalog="system" width="128" height="81"/>
+        <namedColor name="ESB Blue">
+            <color red="0.1803921568627451" green="0.54117647058823526" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ESB Green">
             <color red="0.23137254901960785" green="0.70980392156862748" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

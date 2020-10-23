@@ -38,11 +38,11 @@ class PickupTableViewCell: UITableViewCell {
         if pickup.status == "COMPLETE" {
             statusLabel.text = "Complete"
             statusImageView.image = UIImage(systemName: "checkmark.seal.fill")
-            statusImageView.tintColor = UIColor(named: .colorESBGreen)
+            statusImageView.tintColor = UIColor(named: .colorESBBlue)
         } else if pickup.status == "OUT_FOR_PICKUP" {
             statusLabel.text = "Out for Pickup"
             statusImageView.image = UIImage(systemName: "checkmark.seal")
-            statusImageView.tintColor = UIColor(named: .colorESBGreen)
+            statusImageView.tintColor = UIColor(named: .colorESBBlue)
         } else if pickup.status == "CANCELLED" {
             statusLabel.text = "Canceled"
             statusLabel.textColor = UIColor(named: .colorESBRed)
@@ -51,7 +51,7 @@ class PickupTableViewCell: UITableViewCell {
         } else if pickup.status == "SUBMITTED" {
             statusLabel.text = "Sumbitted"
             statusImageView.image = UIImage(systemName: "checkmark.seal")
-            statusImageView.tintColor = UIColor(named: .colorESBGreen)
+            statusImageView.tintColor = UIColor(named: .colorESBBlue)
         }
         guard let controller = controller else { return }
         let property = controller.properties[pickup.propertyId]

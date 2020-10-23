@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2160.8695652173915" y="934.82142857142856"/>
         </scene>
-        <!--Setting-->
+        <!--Settings-->
         <scene sceneID="bO7-KI-trL">
             <objects>
                 <viewController id="f9j-El-38h" customClass="ProfileDetailViewController" customModule="labs_ios_starter" customModuleProvider="target" sceneMemberID="viewController">
@@ -314,7 +314,7 @@
                             <constraint firstItem="zoH-xS-YQh" firstAttribute="trailing" secondItem="qwx-MM-6ro" secondAttribute="trailing" id="zyg-aE-vcH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Setting" id="9Uc-I4-5wr">
+                    <navigationItem key="navigationItem" title="Settings" id="9Uc-I4-5wr">
                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="QKr-dI-f5O">
                             <connections>
                                 <action selector="cancelProfileUpdate:" destination="f9j-El-38h" id="8sw-WS-Vtb"/>

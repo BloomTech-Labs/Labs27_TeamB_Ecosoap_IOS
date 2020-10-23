@@ -47,7 +47,7 @@ class DashboardCollectionViewCell: UICollectionViewCell {
             imageView.image = UIImage(systemName: "person.fill")
         } else if indexPath.row == 1 {
             textLabel.text = "Properties"
-            imageView.image = UIImage(named: "ESB Property")
+            imageView.image = UIImage(named: "building.fill")
         } else if indexPath.row == 2 {
             textLabel.text = "Settings"
             imageView.image = UIImage(systemName: "gear")
